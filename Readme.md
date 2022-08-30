@@ -1,5 +1,5 @@
 # WeatherMelon
-WeatherMelon adalah aplikasi desktop prediksi cuaca ⛅. 
+WeatherMelon adalah aplikasi desktop prediksi cuaca ⛅ 
 
 ### Fruit Lovers
 Ketua Kelompok: Khalid Rizki Ananta \
