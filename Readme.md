@@ -2,6 +2,6 @@
 WeatherMelon adalah aplikasi desktop prediksi cuaca ⛅ 
 
 ### Fruit Lovers
-Ketua Kelompok: Khalid Rizki Ananta \
+Ketua Kelompok: Khalid Rizki Ananta - 20/460548/TK/51137 \
 Anggota 1: Rangga Aulia Rahman \
 Anggota 2: Senopati Ajeng Sinta Ayu Nadya Rizki
