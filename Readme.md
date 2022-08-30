@@ -1,4 +1,4 @@
-# WeatherMelon
+# WeatherMelon 🍉
 WeatherMelon adalah aplikasi desktop prediksi cuaca ⛅ 
 
 ### Fruit Lovers
