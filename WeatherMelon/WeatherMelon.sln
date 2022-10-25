@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32819.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherMelon", "WeatherMelon\WeatherMelon.csproj", "{6C6056DD-602F-4EE7-9C6D-5257B0FA8B24}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherMelon", "WeatherMelon\WeatherMelon.csproj", "{8CEE5479-BC0D-4DB5-9388-52297226369E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6C6056DD-602F-4EE7-9C6D-5257B0FA8B24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6C6056DD-602F-4EE7-9C6D-5257B0FA8B24}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6C6056DD-602F-4EE7-9C6D-5257B0FA8B24}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6C6056DD-602F-4EE7-9C6D-5257B0FA8B24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CEE5479-BC0D-4DB5-9388-52297226369E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CEE5479-BC0D-4DB5-9388-52297226369E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CEE5479-BC0D-4DB5-9388-52297226369E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CEE5479-BC0D-4DB5-9388-52297226369E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {C846C6E7-7868-45EC-B893-E7FD047F18B2}
+		SolutionGuid = {5FEA4469-9159-43D2-B6D7-F53D8E9FF899}
 	EndGlobalSection
 EndGlobal
