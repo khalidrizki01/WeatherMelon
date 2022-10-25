@@ -8,6 +8,10 @@ namespace WeatherMelon
 {
     internal class detailCuaca
     {
+        public detailCuaca()
+        {
+
+        }
 
     }
 }
