@@ -10,16 +10,32 @@ using System.Windows.Forms;
 
 namespace WeatherMelon
 {
-    public partial class loginForm : Form
+    public partial class LoginForm : Form
     {
-        public loginForm()
+        public LoginForm()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
+            if (tbEmail.Text=="user@gmail.com" && tbPassword.Text=="password")
+            {
+                DialogResult = DialogResult.OK; 
+                Close();
+            }
+            else
+            {
+                MessageBox.Show("Masukkan 'user@gmail.com' dan 'password'");
+            }
+        }
 
+        private void lblRegister_DoubleClick(object sender, EventArgs e)
+        {
+            RegisterForm register = new RegisterForm(this);
+            this.Hide();
+            register.ShowDialog();
+           
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace WeatherMelon
 {
-    partial class loginForm
+    partial class LoginForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(loginForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.tbEmail = new System.Windows.Forms.TextBox();
             this.tbPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
@@ -63,7 +63,7 @@
             this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.Click += new System.EventHandler(this.button1_Click);
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // lblRegister
             // 
@@ -76,19 +76,20 @@
             this.lblRegister.Size = new System.Drawing.Size(62, 15);
             this.lblRegister.TabIndex = 3;
             this.lblRegister.Text = "Register";
+            this.lblRegister.DoubleClick += new System.EventHandler(this.lblRegister_DoubleClick);
             // 
-            // loginForm
+            // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1280, 800);
+            this.ClientSize = new System.Drawing.Size(1280, 788);
             this.Controls.Add(this.lblRegister);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.tbPassword);
             this.Controls.Add(this.tbEmail);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "loginForm";
+            this.Name = "LoginForm";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();

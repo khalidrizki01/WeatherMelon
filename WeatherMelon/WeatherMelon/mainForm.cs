@@ -10,11 +10,27 @@ using System.Windows.Forms;
 
 namespace WeatherMelon
 {
-    public partial class mainForm : Form
+    public partial class MainForm : Form
     {
-        public mainForm()
+        public MainForm()
         {
             InitializeComponent();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            this.Shown += MainForm_Shown;
+        }
+
+        private void MainForm_Shown(object sender, EventArgs e)
+        {
+            LoginForm loginForm = new LoginForm();
+
+            if (loginForm.ShowDialog() == DialogResult.OK)
+            {
+                MessageBox.Show("Nantikan fitur selanjutnya");
+                //this.Close();
+            }
         }
     }
 }
