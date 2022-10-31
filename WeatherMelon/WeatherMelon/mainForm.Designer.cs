@@ -39,7 +39,7 @@
             this.ClientSize = new System.Drawing.Size(1165, 749);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Text = "WeatherMelon";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.Shown += new System.EventHandler(this.MainForm_Shown);
             this.ResumeLayout(false);

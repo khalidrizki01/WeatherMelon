@@ -38,28 +38,28 @@
             // tbEmail
             // 
             this.tbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 27F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbEmail.Location = new System.Drawing.Point(510, 305);
+            this.tbEmail.Location = new System.Drawing.Point(155, 299);
             this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(262, 48);
+            this.tbEmail.Size = new System.Drawing.Size(415, 48);
             this.tbEmail.TabIndex = 0;
             // 
             // tbPassword
             // 
             this.tbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 27F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPassword.Location = new System.Drawing.Point(510, 394);
+            this.tbPassword.Location = new System.Drawing.Point(155, 401);
             this.tbPassword.Name = "tbPassword";
-            this.tbPassword.Size = new System.Drawing.Size(262, 48);
+            this.tbPassword.Size = new System.Drawing.Size(415, 48);
             this.tbPassword.TabIndex = 1;
             // 
             // btnLogin
             // 
-            this.btnLogin.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnLogin.BackColor = System.Drawing.Color.Indigo;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnLogin.Location = new System.Drawing.Point(554, 473);
+            this.btnLogin.Location = new System.Drawing.Point(217, 550);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(171, 44);
+            this.btnLogin.Size = new System.Drawing.Size(309, 44);
             this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -69,11 +69,11 @@
             // 
             this.lblRegister.AutoSize = true;
             this.lblRegister.BackColor = System.Drawing.Color.Transparent;
-            this.lblRegister.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegister.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblRegister.Location = new System.Drawing.Point(688, 560);
+            this.lblRegister.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegister.ForeColor = System.Drawing.Color.Indigo;
+            this.lblRegister.Location = new System.Drawing.Point(425, 614);
             this.lblRegister.Name = "lblRegister";
-            this.lblRegister.Size = new System.Drawing.Size(62, 15);
+            this.lblRegister.Size = new System.Drawing.Size(76, 18);
             this.lblRegister.TabIndex = 3;
             this.lblRegister.Text = "Register";
             this.lblRegister.DoubleClick += new System.EventHandler(this.lblRegister_DoubleClick);
@@ -83,14 +83,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1280, 788);
+            this.ClientSize = new System.Drawing.Size(1280, 749);
             this.Controls.Add(this.lblRegister);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.tbPassword);
             this.Controls.Add(this.tbEmail);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "LoginForm";
-            this.Text = "Form1";
+            this.Text = "Log in";
             this.ResumeLayout(false);
             this.PerformLayout();
 
