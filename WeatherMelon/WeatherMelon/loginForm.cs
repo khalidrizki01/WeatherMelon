@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,19 +19,51 @@ namespace WeatherMelon
             InitializeComponent();
         }
 
+        private NpgsqlConnection conn;
+        public static string connstring = "Host=localhost;Port=5432;Username=postgres;Password=postgres;Database=postgres";
+        private string query;
+        private NpgsqlCommand cmd;
+        private DataTable dt;
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (tbEmail.Text=="user@gmail.com" && tbPassword.Text=="password")
+            try
             {
-                // DialogResult = DialogResult.OK;
-                MainForm mainForm = new MainForm();
-                this.Hide();
-                mainForm.Show();
-                // Close();
+                if (conn.State != ConnectionState.Open)
+                {
+                    conn.Close();
+                    conn.Open();
+                }
+                query = "Select * from tbluser where username = '" + tbEmail.Text.Trim() + "'and password = '" + tbPassword.Text.Trim() + "'";
+                /*SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(query, conn);
+                DataTable dataTable = new DataTable();
+                sqlDataAdapter.Fill(dataTable);*/
+
+                cmd = new NpgsqlCommand(query, conn);
+                dt = new DataTable();
+
+                NpgsqlDataReader rd = cmd.ExecuteReader();
+
+                dt.Load(rd);
+
+                if (dt.Rows.Count == 1)
+                {
+                    MessageBox.Show("Login berhasil");
+                    MainForm objForm1 = new MainForm();
+                    this.Hide();
+                    objForm1.Show();
+                }
+                else if (tbPassword.Text == "" || tbEmail.Text == "")
+                {
+                    MessageBox.Show("Tidak ada input");
+                }
+                else
+                    MessageBox.Show("Username belum terdaftar atau salah");
             }
-            else
+
+            catch (Exception ex)
             {
-                MessageBox.Show("Masukkan 'user@gmail.com' dan 'password'");
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -39,6 +73,11 @@ namespace WeatherMelon
             this.Hide();
             register.ShowDialog();
            
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+            conn = new NpgsqlConnection(connstring);
         }
     }
 }

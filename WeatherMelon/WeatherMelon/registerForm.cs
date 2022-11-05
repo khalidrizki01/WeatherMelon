@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,10 @@ namespace WeatherMelon
     public partial class RegisterForm : Form
     {
         LoginForm loginForm;
+        private NpgsqlConnection conn;
+        private string sql;
+        private NpgsqlCommand cmd;
+
         public RegisterForm(LoginForm loginForm)
         {
             InitializeComponent();
@@ -21,16 +26,32 @@ namespace WeatherMelon
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            if (tbNameRegist.Text == "John Doe" && tbEmailRegist.Text == "user@gmail.com" && tbPasswordRegist.Text == "password" && tbCityRegist.Text=="Jogja")
+            try
             {
-                MessageBox.Show("Anda berhasil Sign Up, silakan Login");
-                DialogResult = DialogResult.OK;
-                loginForm.Show();
-                this.Close();
+                if(conn.State != ConnectionState.Open)
+                {
+                    conn.Close();
+                    conn.Open();
+                }
+                sql = @"SELECT * FROM user_insert(:_username,:_password)";
+                cmd = new NpgsqlCommand(sql, conn);
+
+                cmd.Parameters.AddWithValue("_username", tbNameRegist.Text);
+                cmd.Parameters.AddWithValue("_password", tbPasswordRegist.Text);
+
+                if((int)cmd.ExecuteScalar() == 1)
+                {
+                    MessageBox.Show("Success", "Success",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    conn.Close();
+                }
+
             }
-            else
+
+            catch (Exception ex)
             {
-                MessageBox.Show("Masukkan 'John Doe', 'user@gmail.com', 'password', dan 'Jogja'");
+                MessageBox.Show("Error : " + ex.Message, "Failed",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -43,6 +64,11 @@ namespace WeatherMelon
         private void lblLogin_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void RegisterForm_Load(object sender, EventArgs e)
+        {
+            conn = new NpgsqlConnection(LoginForm.connstring);
         }
     }
 }
