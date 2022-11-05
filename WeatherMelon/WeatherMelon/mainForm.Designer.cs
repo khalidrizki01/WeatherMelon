@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.gbToday = new System.Windows.Forms.GroupBox();
-            this.lblToday = new System.Windows.Forms.Label();
-            this.lblTodayWeather = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblTodayWeather = new System.Windows.Forms.Label();
+            this.lblToday = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,15 +56,23 @@
             this.gbToday.TabIndex = 0;
             this.gbToday.TabStop = false;
             // 
-            // lblToday
+            // label1
             // 
-            this.lblToday.AutoSize = true;
-            this.lblToday.Font = new System.Drawing.Font("Arial Rounded MT Bold", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblToday.Location = new System.Drawing.Point(91, 16);
-            this.lblToday.Name = "lblToday";
-            this.lblToday.Size = new System.Drawing.Size(102, 33);
-            this.lblToday.TabIndex = 0;
-            this.lblToday.Text = "Today";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(167, 204);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 33);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "°C";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(36, 96);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(114, 112);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // lblTodayWeather
             // 
@@ -76,23 +84,15 @@
             this.lblTodayWeather.TabIndex = 1;
             this.lblTodayWeather.Text = "Today Weather";
             // 
-            // pictureBox1
+            // lblToday
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(36, 96);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(114, 112);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(167, 204);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 33);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "°C";
+            this.lblToday.AutoSize = true;
+            this.lblToday.Font = new System.Drawing.Font("Arial Rounded MT Bold", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblToday.Location = new System.Drawing.Point(91, 16);
+            this.lblToday.Name = "lblToday";
+            this.lblToday.Size = new System.Drawing.Size(102, 33);
+            this.lblToday.TabIndex = 0;
+            this.lblToday.Text = "Today";
             // 
             // tableLayoutPanel1
             // 
@@ -100,7 +100,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.47561F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.52439F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 162F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 152F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 153F));
             this.tableLayoutPanel1.Location = new System.Drawing.Point(440, 277);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
@@ -143,6 +143,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "MainForm";
             this.Text = "WeatherMelon";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.Shown += new System.EventHandler(this.MainForm_Shown);
             this.gbToday.ResumeLayout(false);

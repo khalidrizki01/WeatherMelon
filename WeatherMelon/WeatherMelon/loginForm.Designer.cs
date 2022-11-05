@@ -69,6 +69,7 @@
             // 
             this.lblRegister.AutoSize = true;
             this.lblRegister.BackColor = System.Drawing.Color.Transparent;
+            this.lblRegister.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblRegister.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegister.ForeColor = System.Drawing.Color.Indigo;
             this.lblRegister.Location = new System.Drawing.Point(425, 614);

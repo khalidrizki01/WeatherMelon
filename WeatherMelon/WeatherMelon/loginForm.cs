@@ -21,8 +21,11 @@ namespace WeatherMelon
         {
             if (tbEmail.Text=="user@gmail.com" && tbPassword.Text=="password")
             {
-                DialogResult = DialogResult.OK; 
-                Close();
+                // DialogResult = DialogResult.OK;
+                MainForm mainForm = new MainForm();
+                this.Hide();
+                mainForm.Show();
+                // Close();
             }
             else
             {
