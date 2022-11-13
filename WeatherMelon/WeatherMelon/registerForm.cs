@@ -70,5 +70,11 @@ namespace WeatherMelon
         {
             conn = new NpgsqlConnection(LoginForm.connstring);
         }
+
+        private void RegisterForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
     }
 }

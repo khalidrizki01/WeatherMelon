@@ -31,11 +31,12 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.gbToday = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.lbTemp = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblTodayWeather = new System.Windows.Forms.Label();
             this.lblToday = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.favoriteCityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,7 +47,6 @@
             this.lblMaxWS = new System.Windows.Forms.Label();
             this.lblMaxTemp = new System.Windows.Forms.Label();
             this.lbCity = new System.Windows.Forms.Label();
-            this.lbTemp = new System.Windows.Forms.Label();
             this.lblMaxWSNo = new System.Windows.Forms.Label();
             this.lblMin = new System.Windows.Forms.Label();
             this.lblMinWSNo = new System.Windows.Forms.Label();
@@ -55,6 +55,7 @@
             this.lblMinTempNo = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.btFavCity = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.gbToday.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -74,25 +75,20 @@
             this.gbToday.TabIndex = 0;
             this.gbToday.TabStop = false;
             // 
-            // tableLayoutPanel1
+            // lbTemp
             // 
-            this.tableLayoutPanel1.ColumnCount = 4;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.47561F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.52439F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 162F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 154F));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(441, 256);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(652, 208);
-            this.tableLayoutPanel1.TabIndex = 1;
+            this.lbTemp.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTemp.Location = new System.Drawing.Point(78, 236);
+            this.lbTemp.Name = "lbTemp";
+            this.lbTemp.Size = new System.Drawing.Size(89, 25);
+            this.lbTemp.TabIndex = 4;
+            this.lbTemp.Text = "lbTemp";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(167, 204);
+            this.label1.Location = new System.Drawing.Point(164, 229);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 33);
             this.label1.TabIndex = 3;
@@ -126,6 +122,20 @@
             this.lblToday.TabIndex = 0;
             this.lblToday.Text = "Today";
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 4;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.47561F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.52439F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 173F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 144F));
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(441, 256);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(652, 208);
+            this.tableLayoutPanel1.TabIndex = 1;
+            // 
             // menuStrip1
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -154,11 +164,10 @@
             // tbSearch
             // 
             this.tbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSearch.Location = new System.Drawing.Point(822, 153);
+            this.tbSearch.Location = new System.Drawing.Point(826, 153);
             this.tbSearch.Name = "tbSearch";
             this.tbSearch.Size = new System.Drawing.Size(217, 29);
             this.tbSearch.TabIndex = 3;
-            this.tbSearch.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // contextMenuStrip1
             // 
@@ -194,7 +203,6 @@
             this.lblMaxWS.Size = new System.Drawing.Size(54, 16);
             this.lblMaxWS.TabIndex = 7;
             this.lblMaxWS.Text = "MaxWS";
-            this.lblMaxWS.Click += new System.EventHandler(this.lblMaxWS_Click);
             // 
             // lblMaxTemp
             // 
@@ -215,17 +223,6 @@
             this.lbCity.Size = new System.Drawing.Size(102, 37);
             this.lbCity.TabIndex = 9;
             this.lbCity.Text = "lbCity";
-            // 
-            // lbTemp
-            // 
-            this.lbTemp.AutoSize = true;
-            this.lbTemp.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTemp.Location = new System.Drawing.Point(115, 181);
-            this.lbTemp.Name = "lbTemp";
-            this.lbTemp.Size = new System.Drawing.Size(89, 25);
-            this.lbTemp.TabIndex = 4;
-            this.lbTemp.Text = "lbTemp";
-            this.lbTemp.Click += new System.EventHandler(this.label7_Click);
             // 
             // lblMaxWSNo
             // 
@@ -306,12 +303,25 @@
             this.btFavCity.Text = "Favorite City";
             this.btFavCity.UseVisualStyleBackColor = true;
             // 
+            // btnSearch
+            // 
+            this.btnSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearch.BackgroundImage")));
+            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSearch.Location = new System.Drawing.Point(1041, 153);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(52, 29);
+            this.btnSearch.TabIndex = 20;
+            this.btnSearch.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1177, 687);
+            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btFavCity);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lblMinTempNo);
@@ -333,8 +343,6 @@
             this.Name = "MainForm";
             this.Text = "WeatherMelon";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
-            this.Load += new System.EventHandler(this.MainForm_Load);
-            this.Shown += new System.EventHandler(this.MainForm_Shown);
             this.gbToday.ResumeLayout(false);
             this.gbToday.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -372,6 +380,7 @@
         private System.Windows.Forms.Label lblMinTempNo;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btFavCity;
+        private System.Windows.Forms.Button btnSearch;
     }
 }
 

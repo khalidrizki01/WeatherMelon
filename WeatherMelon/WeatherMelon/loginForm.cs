@@ -34,7 +34,7 @@ namespace WeatherMelon
                     conn.Close();
                     conn.Open();
                 }
-                query = "Select * from tbluser where username = '" + tbEmail.Text.Trim() + "'and password = '" + tbPassword.Text.Trim() + "'";
+                query = "Select * from usertable where username = '" + tbEmail.Text.Trim() + "'and password = '" + tbPassword.Text.Trim() + "'";
                 /*SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(query, conn);
                 DataTable dataTable = new DataTable();
                 sqlDataAdapter.Fill(dataTable);*/
@@ -78,6 +78,11 @@ namespace WeatherMelon
         private void LoginForm_Load(object sender, EventArgs e)
         {
             conn = new NpgsqlConnection(connstring);
+        }
+
+        private void LoginForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

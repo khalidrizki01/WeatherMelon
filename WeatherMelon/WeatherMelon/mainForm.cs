@@ -17,44 +17,37 @@ namespace WeatherMelon
             InitializeComponent();
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
+/*        private void MainForm_Load(object sender, EventArgs e)
         {
             // this.Shown += MainForm_Shown;
         }
 
         private void MainForm_Shown(object sender, EventArgs e)
         {
-           /* LoginForm loginForm = new LoginForm();
+           *//* LoginForm loginForm = new LoginForm();
 
             if (loginForm.ShowDialog() == DialogResult.OK)
             {
                 MessageBox.Show("Nantikan fitur selanjutnya");
                 //this.Close();
-            }*/
-        }
+            }*//*
+        }*/
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void btnSearch_Click(object sender, EventArgs e)
         {
+            DetailCuaca dtl = new DetailCuaca();
 
-        }
+            dtl.city = tbSearch.Text;
 
-        private void label7_Click(object sender, EventArgs e)
-        {
+            dtl.GetForecast();
 
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblMaxWS_Click(object sender, EventArgs e)
-        {
+            lblTodayWeather.Text = dtl.condition;
+            lbTemp.Text = dtl.avgTemp;
 
         }
     }

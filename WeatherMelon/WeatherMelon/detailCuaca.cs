@@ -8,13 +8,14 @@ using System.Xml.Linq;
 
 namespace WeatherMelon
 {
-    internal class detailCuaca
+    internal class DetailCuaca
     {
         public string city;
         public string country;
 
         public string maxTemp;
         public string minTemp;
+        public string avgTemp;
 
         public string maxwindm;
         public string maxwindk;
@@ -24,7 +25,7 @@ namespace WeatherMelon
 
         public void GetForecast()
         {
-            string url = string.Format("http://api.weatherapi.com/v1/forecast.xml?key=d03903d1f8894aa4aa840215212704&q={0}&days=1&aqi=no&alerts=no", city);
+            string url = string.Format("http://api.weatherapi.com/v1/forecast.xml?key=5aec79e3b7f241ac9be131349221311&q={0}&days=0&aqi=no&alerts=no", this.city);
 
             XDocument doc = XDocument.Load(url);
 
@@ -32,6 +33,8 @@ namespace WeatherMelon
 
             maxTemp = (string)doc.Descendants("maxtemp_c").FirstOrDefault();
             minTemp = (string)doc.Descendants("mintemp_c").FirstOrDefault();
+
+            avgTemp = (string)doc.Descendants("avgtemp_c").FirstOrDefault(); 
 
             maxwindm = (string)doc.Descendants("maxwind_mph").FirstOrDefault();
             maxwindk = (string)doc.Descendants("maxwind_kph").FirstOrDefault();
