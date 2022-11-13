@@ -538,7 +538,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.ClientSize = new System.Drawing.Size(1177, 687);
+            this.ClientSize = new System.Drawing.Size(1165, 749);
             this.Controls.Add(this.btFavCity);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lblMinTempNo);
