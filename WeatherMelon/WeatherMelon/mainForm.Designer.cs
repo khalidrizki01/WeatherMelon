@@ -554,7 +554,6 @@
             this.Controls.Add(this.lblHum);
             this.Controls.Add(this.lblRec);
             this.Controls.Add(this.tbSearch);
-            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.gbToday);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
