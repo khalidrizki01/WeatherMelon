@@ -384,7 +384,6 @@
             this.tbSearch.Name = "tbSearch";
             this.tbSearch.Size = new System.Drawing.Size(217, 29);
             this.tbSearch.TabIndex = 3;
-            this.tbSearch.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // contextMenuStrip1
             // 
@@ -420,7 +419,6 @@
             this.lblMaxWS.Size = new System.Drawing.Size(54, 16);
             this.lblMaxWS.TabIndex = 7;
             this.lblMaxWS.Text = "MaxWS";
-            this.lblMaxWS.Click += new System.EventHandler(this.lblMaxWS_Click);
             // 
             // lblMaxTemp
             // 
@@ -451,7 +449,6 @@
             this.lbTemp.Size = new System.Drawing.Size(89, 25);
             this.lbTemp.TabIndex = 4;
             this.lbTemp.Text = "lbTemp";
-            this.lbTemp.Click += new System.EventHandler(this.label7_Click);
             // 
             // lblMaxWSNo
             // 
