@@ -50,5 +50,12 @@ namespace WeatherMelon
             lbTemp.Text = dtl.avgTemp;
 
         }
+
+        }
+
+        private void lblMaxWS_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
