@@ -49,7 +49,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lblTgl3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.lblTgl4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -261,7 +260,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.Lavender;
             this.panel3.Controls.Add(this.lblWeather4);
-            this.panel3.Controls.Add(this.label1);
+            //this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.pictureBox4);
             this.panel3.Controls.Add(this.lblTgl4);
             this.panel3.Location = new System.Drawing.Point(781, 274);
