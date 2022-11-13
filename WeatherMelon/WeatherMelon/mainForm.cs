@@ -38,24 +38,5 @@ namespace WeatherMelon
             Application.Exit();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblMaxWS_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
