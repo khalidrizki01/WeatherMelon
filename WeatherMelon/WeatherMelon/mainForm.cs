@@ -51,11 +51,10 @@ namespace WeatherMelon
 
         }
 
-        }
-
-        private void lblMaxWS_Click(object sender, EventArgs e)
+        private void sPanel1_Paint(object sender, PaintEventArgs e)
         {
-
+            Pen pen = new Pen(Color.FromArgb(255, 0, 0, 0));
+            e.Graphics.DrawLine(pen, 30, 300, 1150, 300);
         }
     }
 }

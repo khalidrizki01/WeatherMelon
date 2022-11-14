@@ -36,49 +36,54 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblTodayWeather = new System.Windows.Forms.Label();
             this.lblToday = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.favoriteCityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTomorrow = new System.Windows.Forms.Label();
             this.lblTemp2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblTglTomorrow = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblWeather3 = new System.Windows.Forms.Label();
             this.lblTemp3 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lblTgl3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lblWeather4 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.lblTgl4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.lblWeather5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.lblTgl5 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.lblWeather3 = new System.Windows.Forms.Label();
-            this.lblWeather4 = new System.Windows.Forms.Label();
-            this.lblWeather5 = new System.Windows.Forms.Label();
             this.tbSearch = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.lblRec = new System.Windows.Forms.Label();
             this.lblHum = new System.Windows.Forms.Label();
             this.lblMaxWS = new System.Windows.Forms.Label();
             this.lblMaxTemp = new System.Windows.Forms.Label();
-            this.lbCity = new System.Windows.Forms.Label();
             this.lblMaxWSNo = new System.Windows.Forms.Label();
             this.lblMin = new System.Windows.Forms.Label();
             this.lblMinWSNo = new System.Windows.Forms.Label();
             this.lblMaxTempNo = new System.Windows.Forms.Label();
             this.lblMinTemp = new System.Windows.Forms.Label();
             this.lblMinTempNo = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.btFavCity = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.orchidSPanel2 = new WeatherMelon.OrchidSPanel();
+            this.lblNext4Days = new System.Windows.Forms.Label();
+            this.orchidSPanel1 = new WeatherMelon.OrchidSPanel();
+            this.lblTodayHighlight = new System.Windows.Forms.Label();
+            this.sPanel1 = new WeatherMelon.SPanel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.lbCity = new System.Windows.Forms.Label();
+            this.lblTitleRecommendation = new System.Windows.Forms.Label();
+            this.lblTitleHumidity = new System.Windows.Forms.Label();
+            this.lblTitleWind = new System.Windows.Forms.Label();
+            this.lblTitleTemp = new System.Windows.Forms.Label();
+            this.lblWeatherMelon = new System.Windows.Forms.Label();
             this.gbToday.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -87,6 +92,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.orchidSPanel2.SuspendLayout();
+            this.orchidSPanel1.SuspendLayout();
+            this.sPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbToday
@@ -115,12 +123,13 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(164, 229);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(48, 144);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 33);
-            this.label1.TabIndex = 3;
+            this.label1.Size = new System.Drawing.Size(31, 24);
+            this.label1.TabIndex = 6;
             this.label1.Text = "°C";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
             // 
@@ -149,45 +158,6 @@
             this.lblToday.Size = new System.Drawing.Size(102, 33);
             this.lblToday.TabIndex = 0;
             this.lblToday.Text = "Today";
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 4;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.47561F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.52439F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 173F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 144F));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(441, 256);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(652, 208);
-            this.tableLayoutPanel1.TabIndex = 1;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.homeToolStripMenuItem,
-            this.favoriteCityToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1177, 24);
-            this.menuStrip1.TabIndex = 2;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // homeToolStripMenuItem
-            // 
-            this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
-            this.homeToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
-            this.homeToolStripMenuItem.Text = "Home";
-            // 
-            // favoriteCityToolStripMenuItem
-            // 
-            this.favoriteCityToolStripMenuItem.Name = "favoriteCityToolStripMenuItem";
-            this.favoriteCityToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
-            this.favoriteCityToolStripMenuItem.Text = "Favorite City";
             // 
             // panel1
             // 
@@ -252,6 +222,17 @@
             this.panel2.Size = new System.Drawing.Size(135, 216);
             this.panel2.TabIndex = 4;
             // 
+            // lblWeather3
+            // 
+            this.lblWeather3.AutoSize = true;
+            this.lblWeather3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWeather3.Location = new System.Drawing.Point(20, 174);
+            this.lblWeather3.Name = "lblWeather3";
+            this.lblWeather3.Size = new System.Drawing.Size(96, 24);
+            this.lblWeather3.TabIndex = 5;
+            this.lblWeather3.Text = "Weather 3";
+            this.lblWeather3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // lblTemp3
             // 
             this.lblTemp3.AutoSize = true;
@@ -284,7 +265,6 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.Lavender;
             this.panel3.Controls.Add(this.lblWeather4);
-            //this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.pictureBox4);
             this.panel3.Controls.Add(this.lblTgl4);
             this.panel3.Location = new System.Drawing.Point(781, 274);
@@ -292,16 +272,16 @@
             this.panel3.Size = new System.Drawing.Size(135, 216);
             this.panel3.TabIndex = 5;
             // 
-            // label1
+            // lblWeather4
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(48, 144);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 24);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "°C";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblWeather4.AutoSize = true;
+            this.lblWeather4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWeather4.Location = new System.Drawing.Point(22, 174);
+            this.lblWeather4.Name = "lblWeather4";
+            this.lblWeather4.Size = new System.Drawing.Size(96, 24);
+            this.lblWeather4.TabIndex = 6;
+            this.lblWeather4.Text = "Weather 4";
+            this.lblWeather4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox4
             // 
@@ -331,6 +311,17 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(135, 216);
             this.panel4.TabIndex = 6;
+            // 
+            // lblWeather5
+            // 
+            this.lblWeather5.AutoSize = true;
+            this.lblWeather5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWeather5.Location = new System.Drawing.Point(20, 174);
+            this.lblWeather5.Name = "lblWeather5";
+            this.lblWeather5.Size = new System.Drawing.Size(96, 24);
+            this.lblWeather5.TabIndex = 7;
+            this.lblWeather5.Text = "Weather 5";
+            this.lblWeather5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
@@ -367,39 +358,6 @@
             this.panel5.Size = new System.Drawing.Size(200, 100);
             this.panel5.TabIndex = 7;
             // 
-            // lblWeather3
-            // 
-            this.lblWeather3.AutoSize = true;
-            this.lblWeather3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWeather3.Location = new System.Drawing.Point(20, 174);
-            this.lblWeather3.Name = "lblWeather3";
-            this.lblWeather3.Size = new System.Drawing.Size(96, 24);
-            this.lblWeather3.TabIndex = 5;
-            this.lblWeather3.Text = "Weather 3";
-            this.lblWeather3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblWeather4
-            // 
-            this.lblWeather4.AutoSize = true;
-            this.lblWeather4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWeather4.Location = new System.Drawing.Point(22, 174);
-            this.lblWeather4.Name = "lblWeather4";
-            this.lblWeather4.Size = new System.Drawing.Size(96, 24);
-            this.lblWeather4.TabIndex = 6;
-            this.lblWeather4.Text = "Weather 4";
-            this.lblWeather4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblWeather5
-            // 
-            this.lblWeather5.AutoSize = true;
-            this.lblWeather5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWeather5.Location = new System.Drawing.Point(20, 174);
-            this.lblWeather5.Name = "lblWeather5";
-            this.lblWeather5.Size = new System.Drawing.Size(96, 24);
-            this.lblWeather5.TabIndex = 7;
-            this.lblWeather5.Text = "Weather 5";
-            this.lblWeather5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            //
             // tbSearch
             // 
             this.tbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -452,16 +410,6 @@
             this.lblMaxTemp.Size = new System.Drawing.Size(82, 16);
             this.lblMaxTemp.TabIndex = 8;
             this.lblMaxTemp.Text = "lblMaxTemp";
-            // 
-            // lbCity
-            // 
-            this.lbCity.AutoSize = true;
-            this.lbCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCity.Location = new System.Drawing.Point(161, 163);
-            this.lbCity.Name = "lbCity";
-            this.lbCity.Size = new System.Drawing.Size(102, 37);
-            this.lbCity.TabIndex = 9;
-            this.lbCity.Text = "lbCity";
             // 
             // lblMaxWSNo
             // 
@@ -523,15 +471,6 @@
             this.lblMinTempNo.TabIndex = 16;
             this.lblMinTempNo.Text = "MinTemp";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(168, 80);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "HOME";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // btFavCity
             // 
             this.btFavCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -554,29 +493,163 @@
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
+            // orchidSPanel2
+            // 
+            this.orchidSPanel2.BackColor = System.Drawing.Color.Transparent;
+            this.orchidSPanel2.Controls.Add(this.lblNext4Days);
+            this.orchidSPanel2.Location = new System.Drawing.Point(632, 216);
+            this.orchidSPanel2.Name = "orchidSPanel2";
+            this.orchidSPanel2.Size = new System.Drawing.Size(275, 34);
+            this.orchidSPanel2.TabIndex = 23;
+            // 
+            // lblNext4Days
+            // 
+            this.lblNext4Days.AutoSize = true;
+            this.lblNext4Days.BackColor = System.Drawing.Color.Transparent;
+            this.lblNext4Days.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNext4Days.ForeColor = System.Drawing.Color.White;
+            this.lblNext4Days.Location = new System.Drawing.Point(67, 5);
+            this.lblNext4Days.Name = "lblNext4Days";
+            this.lblNext4Days.Size = new System.Drawing.Size(144, 24);
+            this.lblNext4Days.TabIndex = 25;
+            this.lblNext4Days.Text = "NEXT 4 DAYS";
+            // 
+            // orchidSPanel1
+            // 
+            this.orchidSPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.orchidSPanel1.Controls.Add(this.lblTodayHighlight);
+            this.orchidSPanel1.Location = new System.Drawing.Point(632, 495);
+            this.orchidSPanel1.Name = "orchidSPanel1";
+            this.orchidSPanel1.Size = new System.Drawing.Size(275, 34);
+            this.orchidSPanel1.TabIndex = 22;
+            // 
+            // lblTodayHighlight
+            // 
+            this.lblTodayHighlight.AutoSize = true;
+            this.lblTodayHighlight.BackColor = System.Drawing.Color.Transparent;
+            this.lblTodayHighlight.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTodayHighlight.ForeColor = System.Drawing.Color.White;
+            this.lblTodayHighlight.Location = new System.Drawing.Point(30, 6);
+            this.lblTodayHighlight.Name = "lblTodayHighlight";
+            this.lblTodayHighlight.Size = new System.Drawing.Size(213, 24);
+            this.lblTodayHighlight.TabIndex = 24;
+            this.lblTodayHighlight.Text = "TODAY\'S HIGHLIGHT";
+            // 
+            // sPanel1
+            // 
+            this.sPanel1.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.sPanel1.Controls.Add(this.button1);
+            this.sPanel1.Controls.Add(this.orchidSPanel2);
+            this.sPanel1.Controls.Add(this.lbCity);
+            this.sPanel1.Location = new System.Drawing.Point(0, 0);
+            this.sPanel1.Name = "sPanel1";
+            this.sPanel1.Size = new System.Drawing.Size(1180, 686);
+            this.sPanel1.TabIndex = 21;
+            this.sPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.sPanel1_Paint);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(168, 55);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "HOME";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // lbCity
+            // 
+            this.lbCity.AutoSize = true;
+            this.lbCity.BackColor = System.Drawing.Color.Transparent;
+            this.lbCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCity.Location = new System.Drawing.Point(161, 138);
+            this.lbCity.Name = "lbCity";
+            this.lbCity.Size = new System.Drawing.Size(102, 37);
+            this.lbCity.TabIndex = 9;
+            this.lbCity.Text = "lbCity";
+            // 
+            // lblTitleRecommendation
+            // 
+            this.lblTitleRecommendation.BackColor = System.Drawing.Color.Lavender;
+            this.lblTitleRecommendation.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitleRecommendation.Location = new System.Drawing.Point(437, 538);
+            this.lblTitleRecommendation.Name = "lblTitleRecommendation";
+            this.lblTitleRecommendation.Size = new System.Drawing.Size(153, 18);
+            this.lblTitleRecommendation.TabIndex = 23;
+            this.lblTitleRecommendation.Text = "Recommendation";
+            this.lblTitleRecommendation.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblTitleHumidity
+            // 
+            this.lblTitleHumidity.BackColor = System.Drawing.Color.Lavender;
+            this.lblTitleHumidity.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitleHumidity.Location = new System.Drawing.Point(608, 538);
+            this.lblTitleHumidity.Name = "lblTitleHumidity";
+            this.lblTitleHumidity.Size = new System.Drawing.Size(152, 18);
+            this.lblTitleHumidity.TabIndex = 24;
+            this.lblTitleHumidity.Text = "Humidity";
+            this.lblTitleHumidity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblTitleWind
+            // 
+            this.lblTitleWind.BackColor = System.Drawing.Color.Lavender;
+            this.lblTitleWind.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitleWind.Location = new System.Drawing.Point(782, 538);
+            this.lblTitleWind.Name = "lblTitleWind";
+            this.lblTitleWind.Size = new System.Drawing.Size(152, 18);
+            this.lblTitleWind.TabIndex = 25;
+            this.lblTitleWind.Text = "Wind Speed";
+            this.lblTitleWind.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblTitleTemp
+            // 
+            this.lblTitleTemp.BackColor = System.Drawing.Color.Lavender;
+            this.lblTitleTemp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitleTemp.Location = new System.Drawing.Point(948, 538);
+            this.lblTitleTemp.Name = "lblTitleTemp";
+            this.lblTitleTemp.Size = new System.Drawing.Size(152, 18);
+            this.lblTitleTemp.TabIndex = 26;
+            this.lblTitleTemp.Text = "Temperature";
+            this.lblTitleTemp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblWeatherMelon
+            // 
+            this.lblWeatherMelon.AutoSize = true;
+            this.lblWeatherMelon.BackColor = System.Drawing.Color.Transparent;
+            this.lblWeatherMelon.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWeatherMelon.ForeColor = System.Drawing.Color.DarkOrchid;
+            this.lblWeatherMelon.Location = new System.Drawing.Point(490, 78);
+            this.lblWeatherMelon.Name = "lblWeatherMelon";
+            this.lblWeatherMelon.Size = new System.Drawing.Size(215, 33);
+            this.lblWeatherMelon.TabIndex = 27;
+            this.lblWeatherMelon.Text = "WeatherMelon";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1177, 687);
+            this.Controls.Add(this.lblWeatherMelon);
+            this.Controls.Add(this.lblTitleTemp);
+            this.Controls.Add(this.lblTitleWind);
+            this.Controls.Add(this.lblTitleHumidity);
+            this.Controls.Add(this.lblTitleRecommendation);
+            this.Controls.Add(this.orchidSPanel1);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btFavCity);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.lblMinTempNo);
             this.Controls.Add(this.lblMinTemp);
             this.Controls.Add(this.lblMaxTempNo);
             this.Controls.Add(this.lblMinWSNo);
             this.Controls.Add(this.lblMin);
             this.Controls.Add(this.lblMaxWSNo);
-            this.Controls.Add(this.lbCity);
             this.Controls.Add(this.lblMaxTemp);
             this.Controls.Add(this.lblMaxWS);
             this.Controls.Add(this.lblHum);
             this.Controls.Add(this.lblRec);
             this.Controls.Add(this.tbSearch);
             this.Controls.Add(this.gbToday);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.sPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "MainForm";
             this.Text = "WeatherMelon";
@@ -584,8 +657,6 @@
             this.gbToday.ResumeLayout(false);
             this.gbToday.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -598,6 +669,12 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.orchidSPanel2.ResumeLayout(false);
+            this.orchidSPanel2.PerformLayout();
+            this.orchidSPanel1.ResumeLayout(false);
+            this.orchidSPanel1.PerformLayout();
+            this.sPanel1.ResumeLayout(false);
+            this.sPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -610,9 +687,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblTodayWeather;
         private System.Windows.Forms.Label lblToday;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem favoriteCityToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblTglTomorrow;
         private System.Windows.Forms.Panel panel2;
@@ -651,6 +725,16 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btFavCity;
         private System.Windows.Forms.Button btnSearch;
+        private SPanel sPanel1;
+        private OrchidSPanel orchidSPanel1;
+        private System.Windows.Forms.Label lblTodayHighlight;
+        private OrchidSPanel orchidSPanel2;
+        private System.Windows.Forms.Label lblNext4Days;
+        private System.Windows.Forms.Label lblTitleRecommendation;
+        private System.Windows.Forms.Label lblTitleHumidity;
+        private System.Windows.Forms.Label lblTitleWind;
+        private System.Windows.Forms.Label lblTitleTemp;
+        private System.Windows.Forms.Label lblWeatherMelon;
     }
 }
 

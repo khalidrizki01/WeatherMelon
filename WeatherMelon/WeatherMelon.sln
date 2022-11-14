@@ -5,11 +5,6 @@ VisualStudioVersion = 17.3.32819.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherMelon", "WeatherMelon\WeatherMelon.csproj", "{8CEE5479-BC0D-4DB5-9388-52297226369E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WeatherMelonLib", "WeatherMelonLib", "{F9B360BD-F679-495E-9B33-2EF06A8162CC}"
-	ProjectSection(SolutionItems) = preProject
-		Akun.cs = Akun.cs
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
