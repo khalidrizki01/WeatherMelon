@@ -51,8 +51,6 @@ namespace WeatherMelon
 
         }
 
-        }
-
         private void lblMaxWS_Click(object sender, EventArgs e)
         {
 
