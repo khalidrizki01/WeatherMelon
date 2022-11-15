@@ -4,6 +4,7 @@ using System.Diagnostics.Metrics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Xml.Linq;
 
 namespace WeatherMelon
@@ -27,23 +28,29 @@ namespace WeatherMelon
         {
             string url = string.Format("http://api.weatherapi.com/v1/forecast.xml?key=5aec79e3b7f241ac9be131349221311&q={0}&days=0&aqi=no&alerts=no", this.city);
 
-            XDocument doc = XDocument.Load(url);
+            try
+            {
+                XDocument doc = XDocument.Load(url);
 
-            country = (string)doc.Descendants("country").FirstOrDefault();
+                country = (string)doc.Descendants("country").FirstOrDefault();
 
-            maxTemp = (string)doc.Descendants("maxtemp_c").FirstOrDefault();
-            minTemp = (string)doc.Descendants("mintemp_c").FirstOrDefault();
+                maxTemp = (string)doc.Descendants("maxtemp_c").FirstOrDefault();
+                minTemp = (string)doc.Descendants("mintemp_c").FirstOrDefault();
 
-            avgTemp = (string)doc.Descendants("avgtemp_c").FirstOrDefault(); 
+                avgTemp = (string)doc.Descendants("avgtemp_c").FirstOrDefault();
 
-            maxwindm = (string)doc.Descendants("maxwind_mph").FirstOrDefault();
-            maxwindk = (string)doc.Descendants("maxwind_kph").FirstOrDefault();
+                maxwindm = (string)doc.Descendants("maxwind_mph").FirstOrDefault();
+                maxwindk = (string)doc.Descendants("maxwind_kph").FirstOrDefault();
 
-            humidity = (string)doc.Descendants("avghumidity").FirstOrDefault();
+                humidity = (string)doc.Descendants("avghumidity").FirstOrDefault();
 
-            condition = (string)doc.Descendants("text").FirstOrDefault();
+                condition = (string)doc.Descendants("text").FirstOrDefault();
+            }
 
-            //return (country, maxTemp, minTemp, maxwindk, maxwindm, humidity, condition);
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 
