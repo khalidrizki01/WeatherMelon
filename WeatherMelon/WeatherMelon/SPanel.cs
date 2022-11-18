@@ -21,12 +21,7 @@ namespace WeatherMelon
             Graphics g = e.Graphics;
             g.SmoothingMode = SmoothingMode.AntiAlias;
             g.FillRoundedRectangle(new SolidBrush(Color.White), padd, padd, this.Width - 2*padd, this.Height - 2*padd, 10);
-            /*SolidBrush brush = new SolidBrush(
-                Color.White
-                );
-            g.FillRoundedRectangle(brush, 12, 12, this.Width - 44, this.Height - 64, 10);
-            g.DrawRoundedRectangle(new Pen(ControlPaint.Light(Color.White, 0.00f)), 12, 12, this.Width - 44, this.Height - 64, 10);
-            g.FillRoundedRectangle(new SolidBrush(Color.White), 12, 12 + ((this.Height - 64) / 2), this.Width - 44, (this.Height - 64) / 2, 10);*/
+            g.DrawLine(Pens.DarkSlateBlue, 39, 120, 1141, 120);
         }
     }
 }

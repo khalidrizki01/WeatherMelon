@@ -50,11 +50,5 @@ namespace WeatherMelon
             lbTemp.Text = dtl.avgTemp;
 
         }
-
-        private void sPanel1_Paint(object sender, PaintEventArgs e)
-        {
-            Pen pen = new Pen(Color.FromArgb(255, 0, 0, 0));
-            e.Graphics.DrawLine(pen, 30, 300, 1150, 300);
-        }
     }
 }

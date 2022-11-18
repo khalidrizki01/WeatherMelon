@@ -82,6 +82,8 @@
             this.lblTitleWind = new System.Windows.Forms.Label();
             this.lblTitleTemp = new System.Windows.Forms.Label();
             this.lblWeatherMelon = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.gbToday.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -95,6 +97,8 @@
             this.orchidSPanel2.SuspendLayout();
             this.orchidSPanel1.SuspendLayout();
             this.sPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // gbToday
@@ -545,7 +549,6 @@
             this.sPanel1.Name = "sPanel1";
             this.sPanel1.Size = new System.Drawing.Size(1180, 686);
             this.sPanel1.TabIndex = 21;
-            this.sPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.sPanel1_Paint);
             // 
             // button1
             // 
@@ -561,7 +564,7 @@
             this.lbCity.AutoSize = true;
             this.lbCity.BackColor = System.Drawing.Color.Transparent;
             this.lbCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCity.Location = new System.Drawing.Point(161, 138);
+            this.lbCity.Location = new System.Drawing.Point(161, 150);
             this.lbCity.Name = "lbCity";
             this.lbCity.Size = new System.Drawing.Size(102, 37);
             this.lbCity.TabIndex = 9;
@@ -614,7 +617,7 @@
             // lblWeatherMelon
             // 
             this.lblWeatherMelon.AutoSize = true;
-            this.lblWeatherMelon.BackColor = System.Drawing.Color.Transparent;
+            this.lblWeatherMelon.BackColor = System.Drawing.Color.White;
             this.lblWeatherMelon.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWeatherMelon.ForeColor = System.Drawing.Color.DarkOrchid;
             this.lblWeatherMelon.Location = new System.Drawing.Point(490, 78);
@@ -623,12 +626,32 @@
             this.lblWeatherMelon.TabIndex = 27;
             this.lblWeatherMelon.Text = "WeatherMelon";
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.InitialImage")));
+            this.pictureBox6.Location = new System.Drawing.Point(73, 144);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(62, 61);
+            this.pictureBox6.TabIndex = 28;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(325, 168);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(34, 30);
+            this.pictureBox7.TabIndex = 29;
+            this.pictureBox7.TabStop = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1177, 687);
+            this.Controls.Add(this.pictureBox7);
+            this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.lblWeatherMelon);
             this.Controls.Add(this.lblTitleTemp);
             this.Controls.Add(this.lblTitleWind);
@@ -675,6 +698,8 @@
             this.orchidSPanel1.PerformLayout();
             this.sPanel1.ResumeLayout(false);
             this.sPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -735,6 +760,8 @@
         private System.Windows.Forms.Label lblTitleWind;
         private System.Windows.Forms.Label lblTitleTemp;
         private System.Windows.Forms.Label lblWeatherMelon;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox7;
     }
 }
 
