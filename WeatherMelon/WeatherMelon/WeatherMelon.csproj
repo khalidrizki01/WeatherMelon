@@ -91,6 +91,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GraphicsExtension.cs" />
+    <Compile Include="OrchidSPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DetailCuaca.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
