@@ -95,7 +95,6 @@
             this.lblLogin.TabIndex = 6;
             this.lblLogin.Text = "Login";
             this.lblLogin.Click += new System.EventHandler(this.lblLogin_Click);
-            this.lblLogin.DoubleClick += new System.EventHandler(this.lblLogin_DoubleClick);
             // 
             // RegisterForm
             // 

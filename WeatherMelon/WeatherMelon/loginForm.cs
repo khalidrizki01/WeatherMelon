@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,7 +21,7 @@ namespace WeatherMelon
         }
 
         private NpgsqlConnection conn;
-        public static string connstring = "Host=localhost;Port=5432;Username=postgres;Password=postgres;Database=postgres";
+        internal static string connstring = "Host=localhost;Port=5432;Username=postgres;Password=postgres;Database=postgres";
         private string query;
         private NpgsqlCommand cmd;
         private DataTable dt;
@@ -52,6 +53,7 @@ namespace WeatherMelon
                     MainForm objForm1 = new MainForm();
                     this.Hide();
                     objForm1.Show();
+
                 }
                 else if (tbPassword.Text == "" || tbEmail.Text == "")
                 {
@@ -71,8 +73,7 @@ namespace WeatherMelon
         {
             RegisterForm register = new RegisterForm(this);
             this.Hide();
-            register.ShowDialog();
-           
+            register.Show();
         }
 
         private void LoginForm_Load(object sender, EventArgs e)

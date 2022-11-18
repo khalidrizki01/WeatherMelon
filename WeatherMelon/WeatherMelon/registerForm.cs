@@ -15,13 +15,15 @@ namespace WeatherMelon
     {
         LoginForm loginForm;
         private NpgsqlConnection conn;
-        private string sql;
+        private string query;
         private NpgsqlCommand cmd;
+
+        public LoginForm LoginForm { get => loginForm; set => loginForm = value; }
 
         public RegisterForm(LoginForm loginForm)
         {
             InitializeComponent();
-            this.loginForm = loginForm;
+            this.LoginForm = loginForm;
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
@@ -33,8 +35,8 @@ namespace WeatherMelon
                     conn.Close();
                     conn.Open();
                 }
-                sql = @"SELECT * FROM user_insert(:_username,:_password)";
-                cmd = new NpgsqlCommand(sql, conn);
+                query = @"SELECT * FROM user_insert(:_username,:_password)";
+                cmd = new NpgsqlCommand(query, conn);
 
                 cmd.Parameters.AddWithValue("_username", tbNameRegist.Text);
                 cmd.Parameters.AddWithValue("_password", tbPasswordRegist.Text);
@@ -55,15 +57,16 @@ namespace WeatherMelon
             }
         }
 
-        private void lblLogin_DoubleClick(object sender, EventArgs e)
-        {
-            loginForm.Show();
-            this.Close();
-        }
-
         private void lblLogin_Click(object sender, EventArgs e)
         {
-
+            //this.Hide();
+            if (!this.LoginForm.Visible)
+            {
+                LoginForm.Show();
+                this.Hide();
+            } else {
+                this.LoginForm.SendToBack();
+            }
         }
 
         private void RegisterForm_Load(object sender, EventArgs e)
