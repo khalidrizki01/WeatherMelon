@@ -31,8 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.gbToday = new System.Windows.Forms.GroupBox();
+            this.lblLocalTime = new System.Windows.Forms.Label();
             this.lbTemp = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxCondition = new System.Windows.Forms.PictureBox();
             this.lblTodayWeather = new System.Windows.Forms.Label();
             this.lblToday = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -58,12 +59,7 @@
             this.tbSearch = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.lblRec = new System.Windows.Forms.Label();
-            this.lblHum = new System.Windows.Forms.Label();
-            this.lblMaxWS = new System.Windows.Forms.Label();
             this.lblMaxTemp = new System.Windows.Forms.Label();
-            this.lblMaxWSNo = new System.Windows.Forms.Label();
-            this.lblMin = new System.Windows.Forms.Label();
-            this.lblMinWSNo = new System.Windows.Forms.Label();
             this.lblMaxTempNo = new System.Windows.Forms.Label();
             this.lblMinTemp = new System.Windows.Forms.Label();
             this.lblMinTempNo = new System.Windows.Forms.Label();
@@ -99,8 +95,10 @@
             this.lblTempDay2 = new System.Windows.Forms.Label();
             this.lblTempDay3 = new System.Windows.Forms.Label();
             this.lblTempDay4 = new System.Windows.Forms.Label();
+            this.lblHum = new System.Windows.Forms.Label();
+            this.lblWindSpeed = new System.Windows.Forms.Label();
             this.gbToday.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCondition)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -124,8 +122,9 @@
             // 
             this.gbToday.AutoSize = true;
             this.gbToday.BackColor = System.Drawing.Color.Lavender;
+            this.gbToday.Controls.Add(this.lblLocalTime);
             this.gbToday.Controls.Add(this.lbTemp);
-            this.gbToday.Controls.Add(this.pictureBox1);
+            this.gbToday.Controls.Add(this.pictureBoxCondition);
             this.gbToday.Controls.Add(this.lblTodayWeather);
             this.gbToday.Controls.Add(this.lblToday);
             this.gbToday.Location = new System.Drawing.Point(76, 256);
@@ -133,6 +132,19 @@
             this.gbToday.Size = new System.Drawing.Size(274, 364);
             this.gbToday.TabIndex = 0;
             this.gbToday.TabStop = false;
+            // 
+            // lblLocalTime
+            // 
+            this.lblLocalTime.BackColor = System.Drawing.Color.Transparent;
+            this.lblLocalTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLocalTime.Location = new System.Drawing.Point(77, 72);
+            this.lblLocalTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLocalTime.Name = "lblLocalTime";
+            this.lblLocalTime.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblLocalTime.Size = new System.Drawing.Size(214, 23);
+            this.lblLocalTime.TabIndex = 5;
+            this.lblLocalTime.Text = "Date and Time";
+            this.lblLocalTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbTemp
             // 
@@ -145,13 +157,19 @@
             this.lbTemp.Text = "Temperature";
             this.lbTemp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox1
+            // pictureBoxCondition
             // 
             this.pictureBox1.Location = new System.Drawing.Point(88, 80);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(99, 104);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+            this.pictureBoxCondition.Location = new System.Drawing.Point(77, 99);
+            this.pictureBoxCondition.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBoxCondition.Name = "pictureBoxCondition";
+            this.pictureBoxCondition.Size = new System.Drawing.Size(210, 198);
+            this.pictureBoxCondition.TabIndex = 2;
+            this.pictureBoxCondition.TabStop = false;
             // 
             // lblTodayWeather
             // 
@@ -380,6 +398,7 @@
             this.tbSearch.Name = "tbSearch";
             this.tbSearch.Size = new System.Drawing.Size(217, 29);
             this.tbSearch.TabIndex = 3;
+            this.tbSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbSearch_KeyDown);
             // 
             // contextMenuStrip1
             // 
@@ -513,9 +532,10 @@
             // 
             this.lblTitleRecommendation.BackColor = System.Drawing.Color.Lavender;
             this.lblTitleRecommendation.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitleRecommendation.Location = new System.Drawing.Point(437, 538);
+            this.lblTitleRecommendation.Location = new System.Drawing.Point(583, 662);
+            this.lblTitleRecommendation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitleRecommendation.Name = "lblTitleRecommendation";
-            this.lblTitleRecommendation.Size = new System.Drawing.Size(153, 18);
+            this.lblTitleRecommendation.Size = new System.Drawing.Size(204, 22);
             this.lblTitleRecommendation.TabIndex = 23;
             this.lblTitleRecommendation.Text = "Recommendation";
             this.lblTitleRecommendation.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -524,9 +544,10 @@
             // 
             this.lblTitleHumidity.BackColor = System.Drawing.Color.Lavender;
             this.lblTitleHumidity.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitleHumidity.Location = new System.Drawing.Point(608, 538);
+            this.lblTitleHumidity.Location = new System.Drawing.Point(811, 662);
+            this.lblTitleHumidity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitleHumidity.Name = "lblTitleHumidity";
-            this.lblTitleHumidity.Size = new System.Drawing.Size(152, 18);
+            this.lblTitleHumidity.Size = new System.Drawing.Size(203, 22);
             this.lblTitleHumidity.TabIndex = 24;
             this.lblTitleHumidity.Text = "Humidity";
             this.lblTitleHumidity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -535,9 +556,11 @@
             // 
             this.lblTitleWind.BackColor = System.Drawing.Color.Lavender;
             this.lblTitleWind.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitleWind.Location = new System.Drawing.Point(782, 538);
+            this.lblTitleWind.Location = new System.Drawing.Point(1043, 662);
+            this.lblTitleWind.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitleWind.Name = "lblTitleWind";
-            this.lblTitleWind.Size = new System.Drawing.Size(152, 18);
+            this.lblTitleWind.Size = new System.Drawing.Size(203, 22);
+
             this.lblTitleWind.TabIndex = 25;
             this.lblTitleWind.Text = "Wind Speed";
             this.lblTitleWind.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -546,9 +569,10 @@
             // 
             this.lblTitleTemp.BackColor = System.Drawing.Color.Lavender;
             this.lblTitleTemp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitleTemp.Location = new System.Drawing.Point(948, 538);
+            this.lblTitleTemp.Location = new System.Drawing.Point(1264, 662);
+            this.lblTitleTemp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitleTemp.Name = "lblTitleTemp";
-            this.lblTitleTemp.Size = new System.Drawing.Size(152, 18);
+            this.lblTitleTemp.Size = new System.Drawing.Size(203, 22);
             this.lblTitleTemp.TabIndex = 26;
             this.lblTitleTemp.Text = "Temperature";
             this.lblTitleTemp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -559,9 +583,10 @@
             this.lblWeatherMelon.BackColor = System.Drawing.Color.White;
             this.lblWeatherMelon.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWeatherMelon.ForeColor = System.Drawing.Color.DarkOrchid;
-            this.lblWeatherMelon.Location = new System.Drawing.Point(490, 78);
+            this.lblWeatherMelon.Location = new System.Drawing.Point(653, 96);
+            this.lblWeatherMelon.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWeatherMelon.Name = "lblWeatherMelon";
-            this.lblWeatherMelon.Size = new System.Drawing.Size(215, 33);
+            this.lblWeatherMelon.Size = new System.Drawing.Size(273, 42);
             this.lblWeatherMelon.TabIndex = 27;
             this.lblWeatherMelon.Text = "WeatherMelon";
             // 
@@ -569,18 +594,20 @@
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
             this.pictureBox6.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.InitialImage")));
-            this.pictureBox6.Location = new System.Drawing.Point(73, 144);
+            this.pictureBox6.Location = new System.Drawing.Point(97, 177);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(62, 61);
+            this.pictureBox6.Size = new System.Drawing.Size(83, 75);
             this.pictureBox6.TabIndex = 28;
             this.pictureBox6.TabStop = false;
             // 
             // pictureBox7
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(325, 168);
+            this.pictureBox7.Location = new System.Drawing.Point(433, 207);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(34, 30);
+            this.pictureBox7.Size = new System.Drawing.Size(45, 37);
             this.pictureBox7.TabIndex = 29;
             this.pictureBox7.TabStop = false;
             // 
@@ -608,6 +635,7 @@
             // sPanel1
             // 
             this.sPanel1.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.sPanel1.Controls.Add(this.lblWindSpeed);
             this.sPanel1.Controls.Add(this.groupBox3);
             this.sPanel1.Controls.Add(this.groupBox4);
             this.sPanel1.Controls.Add(this.groupBox2);
@@ -615,6 +643,7 @@
             this.sPanel1.Controls.Add(this.button1);
             this.sPanel1.Controls.Add(this.orchidSPanel2);
             this.sPanel1.Controls.Add(this.lbCity);
+            this.sPanel1.Controls.Add(this.lblHum);
             this.sPanel1.Location = new System.Drawing.Point(0, 0);
             this.sPanel1.Name = "sPanel1";
             this.sPanel1.Size = new System.Drawing.Size(1180, 686);
@@ -769,9 +798,10 @@
             // 
             this.orchidSPanel2.BackColor = System.Drawing.Color.Transparent;
             this.orchidSPanel2.Controls.Add(this.lblNext4Days);
-            this.orchidSPanel2.Location = new System.Drawing.Point(632, 216);
+            this.orchidSPanel2.Location = new System.Drawing.Point(843, 266);
+            this.orchidSPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.orchidSPanel2.Name = "orchidSPanel2";
-            this.orchidSPanel2.Size = new System.Drawing.Size(275, 34);
+            this.orchidSPanel2.Size = new System.Drawing.Size(367, 42);
             this.orchidSPanel2.TabIndex = 23;
             // 
             // lblNext4Days
@@ -780,9 +810,10 @@
             this.lblNext4Days.BackColor = System.Drawing.Color.Transparent;
             this.lblNext4Days.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNext4Days.ForeColor = System.Drawing.Color.White;
-            this.lblNext4Days.Location = new System.Drawing.Point(67, 5);
+            this.lblNext4Days.Location = new System.Drawing.Point(89, 6);
+            this.lblNext4Days.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNext4Days.Name = "lblNext4Days";
-            this.lblNext4Days.Size = new System.Drawing.Size(144, 24);
+            this.lblNext4Days.Size = new System.Drawing.Size(180, 29);
             this.lblNext4Days.TabIndex = 25;
             this.lblNext4Days.Text = "NEXT 4 DAYS";
             // 
@@ -836,6 +867,31 @@
             this.lblTempDay4.Size = new System.Drawing.Size(57, 13);
             this.lblTempDay4.TabIndex = 6;
             this.lblTempDay4.Text = "Weather 1";
+
+            // lblHum
+            // 
+            this.lblHum.BackColor = System.Drawing.Color.Transparent;
+            this.lblHum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHum.Location = new System.Drawing.Point(873, 702);
+            this.lblHum.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblHum.Name = "lblHum";
+            this.lblHum.Size = new System.Drawing.Size(84, 68);
+            this.lblHum.TabIndex = 6;
+            this.lblHum.Text = "Humidity";
+            this.lblHum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblWindSpeed
+            // 
+            this.lblWindSpeed.BackColor = System.Drawing.Color.Transparent;
+            this.lblWindSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWindSpeed.Location = new System.Drawing.Point(1047, 702);
+            this.lblWindSpeed.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblWindSpeed.Name = "lblWindSpeed";
+            this.lblWindSpeed.Size = new System.Drawing.Size(199, 68);
+            this.lblWindSpeed.TabIndex = 28;
+            this.lblWindSpeed.Text = "Wind Speed";
+            this.lblWindSpeed.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+
             // 
             // MainForm
             // 
@@ -855,12 +911,7 @@
             this.Controls.Add(this.lblMinTempNo);
             this.Controls.Add(this.lblMinTemp);
             this.Controls.Add(this.lblMaxTempNo);
-            this.Controls.Add(this.lblMinWSNo);
-            this.Controls.Add(this.lblMin);
-            this.Controls.Add(this.lblMaxWSNo);
             this.Controls.Add(this.lblMaxTemp);
-            this.Controls.Add(this.lblMaxWS);
-            this.Controls.Add(this.lblHum);
             this.Controls.Add(this.lblRec);
             this.Controls.Add(this.tbSearch);
             this.Controls.Add(this.gbToday);
@@ -871,7 +922,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.gbToday.ResumeLayout(false);
             this.gbToday.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCondition)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -909,7 +960,7 @@
 
         private System.Windows.Forms.GroupBox gbToday;
         private System.Windows.Forms.Label lblTemp1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxCondition;
         private System.Windows.Forms.Label lblTodayWeather;
         private System.Windows.Forms.Label lblToday;
         private System.Windows.Forms.Panel panel1;
@@ -937,12 +988,8 @@
         private System.Windows.Forms.Label lbTemp;
         private System.Windows.Forms.Label lblRec;
         private System.Windows.Forms.Label lblHum;
-        private System.Windows.Forms.Label lblMaxWS;
         private System.Windows.Forms.Label lblMaxTemp;
         private System.Windows.Forms.Label lbCity;
-        private System.Windows.Forms.Label lblMaxWSNo;
-        private System.Windows.Forms.Label lblMin;
-        private System.Windows.Forms.Label lblMinWSNo;
         private System.Windows.Forms.Label lblMaxTempNo;
         private System.Windows.Forms.Label lblMinTemp;
         private System.Windows.Forms.Label lblMinTempNo;
@@ -977,6 +1024,10 @@
         private System.Windows.Forms.Label lblTempDay3;
         private System.Windows.Forms.Label lblTempDay2;
         private System.Windows.Forms.Label lblTempDay1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblLocalTime;
+        private System.Windows.Forms.Label lblWindSpeed;
     }
 }
 
