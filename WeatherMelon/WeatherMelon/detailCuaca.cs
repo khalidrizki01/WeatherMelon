@@ -20,10 +20,14 @@ namespace WeatherMelon
 
         public string maxwindm;
         public string maxwindk;
+        public string avgwindk;
 
         public string humidity;
         public string condition;
 
+        public string localtime;
+
+        public string iconUrl;
         public void GetForecast()
         {
             string url = string.Format("http://api.weatherapi.com/v1/forecast.xml?key=5aec79e3b7f241ac9be131349221311&q={0}&days=0&aqi=no&alerts=no", this.city);
@@ -42,9 +46,16 @@ namespace WeatherMelon
                 maxwindm = (string)doc.Descendants("maxwind_mph").FirstOrDefault();
                 maxwindk = (string)doc.Descendants("maxwind_kph").FirstOrDefault();
 
+                avgwindk = (string)doc.Descendants("wind_kph").FirstOrDefault();
+
                 humidity = (string)doc.Descendants("avghumidity").FirstOrDefault();
 
                 condition = (string)doc.Descendants("text").FirstOrDefault();
+
+                localtime = (string)doc.Descendants("localtime").FirstOrDefault();
+
+                iconUrl = (string)doc.Descendants("icon").FirstOrDefault();
+
             }
 
             catch (Exception ex)
