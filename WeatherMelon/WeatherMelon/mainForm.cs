@@ -45,17 +45,27 @@ namespace WeatherMelon
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            lbCity.Text = tbSearch.Text;
-            
-            dtl.city = tbSearch.Text;
+            if (tbSearch.Text == "")
+            {
+                MessageBox.Show("Search Box Kosong!");
+            }
+            else
+            {
+                /*To Display Results*/
+                try
+                {
+                    dtl.searched_city = tbSearch.Text;
+                    dtl.GetForecast();
+                    Displayer();
+                    /*Get Icon PNG*/
+                    getIcon();
+                }
 
-            /*Calling method*/
-            dtl.GetForecast();
-
-            /*To Display Results*/
-            Displayer();
-            /*Get Icon PNG*/
-            getIcon();
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message + "\n karena Daerah tidak dikenali");
+                }
+            }
         }
 
         private void Displayer()
@@ -66,6 +76,9 @@ namespace WeatherMelon
             lblWindSpeed.Font = new Font("Microsoft Sans Serif", 22, FontStyle.Bold);
 
             /*Assigning Values*/
+            lbCity.Text = dtl.resulting_city;
+            tbSearch.Text = dtl.resulting_city;
+
             lblTodayWeather.Text = dtl.condition;
             lbTemp.Text = dtl.avgTemp + "°C";
             lblHum.Text = dtl.humidity;

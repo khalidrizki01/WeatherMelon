@@ -169,10 +169,10 @@
             // 
             this.lblTodayWeather.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTodayWeather.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblTodayWeather.Location = new System.Drawing.Point(21, 369);
+            this.lblTodayWeather.Location = new System.Drawing.Point(28, 363);
             this.lblTodayWeather.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTodayWeather.Name = "lblTodayWeather";
-            this.lblTodayWeather.Size = new System.Drawing.Size(317, 48);
+            this.lblTodayWeather.Size = new System.Drawing.Size(310, 60);
             this.lblTodayWeather.TabIndex = 1;
             this.lblTodayWeather.Text = "Today Weather";
             this.lblTodayWeather.TextAlign = System.Drawing.ContentAlignment.TopCenter;

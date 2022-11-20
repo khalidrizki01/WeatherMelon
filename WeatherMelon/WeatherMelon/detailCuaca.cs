@@ -11,7 +11,8 @@ namespace WeatherMelon
 {
     internal class DetailCuaca
     {
-        public string city;
+        public string searched_city;
+        public string resulting_city;
         public string country;
 
         public string maxTemp;
@@ -30,38 +31,31 @@ namespace WeatherMelon
         public string iconUrl;
         public void GetForecast()
         {
-            string url = string.Format("http://api.weatherapi.com/v1/forecast.xml?key=5aec79e3b7f241ac9be131349221311&q={0}&days=0&aqi=no&alerts=no", this.city);
+            string url = string.Format("http://api.weatherapi.com/v1/forecast.xml?key=5aec79e3b7f241ac9be131349221311&q={0}&days=0&aqi=no&alerts=no", this.searched_city);
 
-            try
-            {
-                XDocument doc = XDocument.Load(url);
+            XDocument doc = XDocument.Load(url);
 
-                country = (string)doc.Descendants("country").FirstOrDefault();
+            resulting_city = (string)doc.Descendants("name").FirstOrDefault();
 
-                maxTemp = (string)doc.Descendants("maxtemp_c").FirstOrDefault();
-                minTemp = (string)doc.Descendants("mintemp_c").FirstOrDefault();
+            country = (string)doc.Descendants("country").FirstOrDefault();
 
-                avgTemp = (string)doc.Descendants("avgtemp_c").FirstOrDefault();
+            maxTemp = (string)doc.Descendants("maxtemp_c").FirstOrDefault();
+            minTemp = (string)doc.Descendants("mintemp_c").FirstOrDefault();
 
-                maxwindm = (string)doc.Descendants("maxwind_mph").FirstOrDefault();
-                maxwindk = (string)doc.Descendants("maxwind_kph").FirstOrDefault();
+            avgTemp = (string)doc.Descendants("avgtemp_c").FirstOrDefault();
 
-                avgwindk = (string)doc.Descendants("wind_kph").FirstOrDefault();
+            maxwindm = (string)doc.Descendants("maxwind_mph").FirstOrDefault();
+            maxwindk = (string)doc.Descendants("maxwind_kph").FirstOrDefault();
 
-                humidity = (string)doc.Descendants("avghumidity").FirstOrDefault();
+            avgwindk = (string)doc.Descendants("wind_kph").FirstOrDefault();
 
-                condition = (string)doc.Descendants("text").FirstOrDefault();
+            humidity = (string)doc.Descendants("avghumidity").FirstOrDefault();
 
-                localtime = (string)doc.Descendants("localtime").FirstOrDefault();
+            condition = (string)doc.Descendants("text").FirstOrDefault();
 
-                iconUrl = (string)doc.Descendants("icon").FirstOrDefault();
+            localtime = (string)doc.Descendants("localtime").FirstOrDefault();
 
-            }
-
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            iconUrl = (string)doc.Descendants("icon").FirstOrDefault();
         }
     }
 
