@@ -40,14 +40,36 @@ namespace WeatherMelon
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            DetailCuaca dtl = new DetailCuaca();
+           
 
+            DetailCuaca dtl = new DetailCuaca();
+            
             dtl.city = tbSearch.Text;
+
 
             dtl.GetForecast();
 
             lblTodayWeather.Text = dtl.condition;
             lbTemp.Text = dtl.avgTemp;
+
+        }
+
+        private void lbCity_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gbToday_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTodayWeather_Click(object sender, EventArgs e)
+        {
 
         }
     }
