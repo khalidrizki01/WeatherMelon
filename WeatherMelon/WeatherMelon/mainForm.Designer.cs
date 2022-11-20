@@ -60,6 +60,7 @@
             this.sPanel1 = new WeatherMelon.SPanel();
             this.lblWindSpeed = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.pictureBoxDay4 = new System.Windows.Forms.PictureBox();
             this.lblTempDay4 = new System.Windows.Forms.Label();
             this.weather4 = new System.Windows.Forms.Label();
             this.lblHari4 = new System.Windows.Forms.Label();
@@ -68,6 +69,7 @@
             this.lblTodayHighlight = new System.Windows.Forms.Label();
             this.lblTitleWind = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.pictureBoxDay3 = new System.Windows.Forms.PictureBox();
             this.lblTempDay3 = new System.Windows.Forms.Label();
             this.weather3 = new System.Windows.Forms.Label();
             this.lblHari3 = new System.Windows.Forms.Label();
@@ -75,10 +77,12 @@
             this.lblWeatherMelon = new System.Windows.Forms.Label();
             this.lblTitleRecommendation = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.pictureBoxDay2 = new System.Windows.Forms.PictureBox();
             this.lblTempDay2 = new System.Windows.Forms.Label();
             this.lblWeather2 = new System.Windows.Forms.Label();
             this.lblHari2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBoxDay1 = new System.Windows.Forms.PictureBox();
             this.lblTempDay1 = new System.Windows.Forms.Label();
             this.lblWeather1 = new System.Windows.Forms.Label();
             this.lblHari1 = new System.Windows.Forms.Label();
@@ -93,10 +97,6 @@
             this.pictureBoxCondition = new System.Windows.Forms.PictureBox();
             this.lblTodayWeather = new System.Windows.Forms.Label();
             this.lblToday = new System.Windows.Forms.Label();
-            this.pictureBoxDay1 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxDay2 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxDay3 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxDay4 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -108,18 +108,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.sPanel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDay4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.orchidSPanel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDay3)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDay2)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDay1)).BeginInit();
             this.orchidSPanel2.SuspendLayout();
             this.gbToday.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCondition)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDay1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDay2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDay3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDay4)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -384,7 +384,7 @@
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
             this.pictureBox7.Location = new System.Drawing.Point(433, 207);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(45, 37);
             this.pictureBox7.TabIndex = 29;
@@ -434,12 +434,21 @@
             this.groupBox3.Controls.Add(this.weather4);
             this.groupBox3.Controls.Add(this.lblHari4);
             this.groupBox3.Location = new System.Drawing.Point(914, 259);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(150, 215);
             this.groupBox3.TabIndex = 27;
             this.groupBox3.TabStop = false;
+            // 
+            // pictureBoxDay4
+            // 
+            this.pictureBoxDay4.Location = new System.Drawing.Point(30, 46);
+            this.pictureBoxDay4.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBoxDay4.Name = "pictureBoxDay4";
+            this.pictureBoxDay4.Size = new System.Drawing.Size(87, 87);
+            this.pictureBoxDay4.TabIndex = 9;
+            this.pictureBoxDay4.TabStop = false;
             // 
             // lblTempDay4
             // 
@@ -463,13 +472,13 @@
             // 
             // lblHari4
             // 
-            this.lblHari4.AutoSize = true;
-            this.lblHari4.Location = new System.Drawing.Point(54, 33);
+            this.lblHari4.Location = new System.Drawing.Point(46, 14);
             this.lblHari4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHari4.Name = "lblHari4";
-            this.lblHari4.Size = new System.Drawing.Size(42, 13);
+            this.lblHari4.Size = new System.Drawing.Size(56, 31);
             this.lblHari4.TabIndex = 4;
             this.lblHari4.Text = "lblHari4";
+            this.lblHari4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // pictureBox6
             // 
@@ -477,7 +486,7 @@
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
             this.pictureBox6.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.InitialImage")));
             this.pictureBox6.Location = new System.Drawing.Point(71, 144);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(52, 61);
             this.pictureBox6.TabIndex = 28;
@@ -524,12 +533,21 @@
             this.groupBox4.Controls.Add(this.weather3);
             this.groupBox4.Controls.Add(this.lblHari3);
             this.groupBox4.Location = new System.Drawing.Point(753, 258);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox4.Size = new System.Drawing.Size(150, 217);
             this.groupBox4.TabIndex = 26;
             this.groupBox4.TabStop = false;
+            // 
+            // pictureBoxDay3
+            // 
+            this.pictureBoxDay3.Location = new System.Drawing.Point(32, 51);
+            this.pictureBoxDay3.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBoxDay3.Name = "pictureBoxDay3";
+            this.pictureBoxDay3.Size = new System.Drawing.Size(87, 87);
+            this.pictureBoxDay3.TabIndex = 8;
+            this.pictureBoxDay3.TabStop = false;
             // 
             // lblTempDay3
             // 
@@ -553,13 +571,13 @@
             // 
             // lblHari3
             // 
-            this.lblHari3.AutoSize = true;
-            this.lblHari3.Location = new System.Drawing.Point(57, 34);
+            this.lblHari3.Location = new System.Drawing.Point(42, 15);
             this.lblHari3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHari3.Name = "lblHari3";
-            this.lblHari3.Size = new System.Drawing.Size(42, 13);
+            this.lblHari3.Size = new System.Drawing.Size(67, 32);
             this.lblHari3.TabIndex = 2;
             this.lblHari3.Text = "lblHari3";
+            this.lblHari3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // lblTitleHumidity
             // 
@@ -606,12 +624,21 @@
             this.groupBox2.Controls.Add(this.lblWeather2);
             this.groupBox2.Controls.Add(this.lblHari2);
             this.groupBox2.Location = new System.Drawing.Point(589, 258);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(150, 217);
             this.groupBox2.TabIndex = 25;
             this.groupBox2.TabStop = false;
+            // 
+            // pictureBoxDay2
+            // 
+            this.pictureBoxDay2.Location = new System.Drawing.Point(28, 51);
+            this.pictureBoxDay2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBoxDay2.Name = "pictureBoxDay2";
+            this.pictureBoxDay2.Size = new System.Drawing.Size(87, 87);
+            this.pictureBoxDay2.TabIndex = 7;
+            this.pictureBoxDay2.TabStop = false;
             // 
             // lblTempDay2
             // 
@@ -635,13 +662,13 @@
             // 
             // lblHari2
             // 
-            this.lblHari2.AutoSize = true;
-            this.lblHari2.Location = new System.Drawing.Point(57, 34);
+            this.lblHari2.Location = new System.Drawing.Point(42, 15);
             this.lblHari2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHari2.Name = "lblHari2";
-            this.lblHari2.Size = new System.Drawing.Size(42, 13);
+            this.lblHari2.Size = new System.Drawing.Size(58, 32);
             this.lblHari2.TabIndex = 0;
             this.lblHari2.Text = "lblHari2";
+            this.lblHari2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // groupBox1
             // 
@@ -651,12 +678,21 @@
             this.groupBox1.Controls.Add(this.lblWeather1);
             this.groupBox1.Controls.Add(this.lblHari1);
             this.groupBox1.Location = new System.Drawing.Point(422, 258);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(150, 217);
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
+            // 
+            // pictureBoxDay1
+            // 
+            this.pictureBoxDay1.Location = new System.Drawing.Point(33, 47);
+            this.pictureBoxDay1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBoxDay1.Name = "pictureBoxDay1";
+            this.pictureBoxDay1.Size = new System.Drawing.Size(87, 87);
+            this.pictureBoxDay1.TabIndex = 6;
+            this.pictureBoxDay1.TabStop = false;
             // 
             // lblTempDay1
             // 
@@ -680,13 +716,13 @@
             // 
             // lblHari1
             // 
-            this.lblHari1.AutoSize = true;
-            this.lblHari1.Location = new System.Drawing.Point(53, 30);
+            this.lblHari1.Location = new System.Drawing.Point(46, 15);
             this.lblHari1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHari1.Name = "lblHari1";
-            this.lblHari1.Size = new System.Drawing.Size(42, 13);
+            this.lblHari1.Size = new System.Drawing.Size(62, 28);
             this.lblHari1.TabIndex = 0;
             this.lblHari1.Text = "lblHari1";
+            this.lblHari1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // button1
             // 
@@ -701,10 +737,10 @@
             // 
             this.orchidSPanel2.BackColor = System.Drawing.Color.Transparent;
             this.orchidSPanel2.Controls.Add(this.lblNext4Days);
-            this.orchidSPanel2.Location = new System.Drawing.Point(548, 207);
-            this.orchidSPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.orchidSPanel2.Location = new System.Drawing.Point(602, 207);
+            this.orchidSPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.orchidSPanel2.Name = "orchidSPanel2";
-            this.orchidSPanel2.Size = new System.Drawing.Size(367, 42);
+            this.orchidSPanel2.Size = new System.Drawing.Size(275, 34);
             this.orchidSPanel2.TabIndex = 23;
             // 
             // lblNext4Days
@@ -713,7 +749,7 @@
             this.lblNext4Days.BackColor = System.Drawing.Color.Transparent;
             this.lblNext4Days.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNext4Days.ForeColor = System.Drawing.Color.White;
-            this.lblNext4Days.Location = new System.Drawing.Point(117, 5);
+            this.lblNext4Days.Location = new System.Drawing.Point(65, 5);
             this.lblNext4Days.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNext4Days.Name = "lblNext4Days";
             this.lblNext4Days.Size = new System.Drawing.Size(144, 24);
@@ -785,7 +821,7 @@
             // pictureBoxCondition
             // 
             this.pictureBoxCondition.Location = new System.Drawing.Point(77, 99);
-            this.pictureBoxCondition.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBoxCondition.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBoxCondition.Name = "pictureBoxCondition";
             this.pictureBoxCondition.Size = new System.Drawing.Size(210, 198);
             this.pictureBoxCondition.TabIndex = 2;
@@ -812,42 +848,6 @@
             this.lblToday.Size = new System.Drawing.Size(102, 33);
             this.lblToday.TabIndex = 0;
             this.lblToday.Text = "Today";
-            // 
-            // pictureBoxDay1
-            // 
-            this.pictureBoxDay1.Location = new System.Drawing.Point(33, 47);
-            this.pictureBoxDay1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBoxDay1.Name = "pictureBoxDay1";
-            this.pictureBoxDay1.Size = new System.Drawing.Size(87, 87);
-            this.pictureBoxDay1.TabIndex = 6;
-            this.pictureBoxDay1.TabStop = false;
-            // 
-            // pictureBoxDay2
-            // 
-            this.pictureBoxDay2.Location = new System.Drawing.Point(28, 51);
-            this.pictureBoxDay2.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBoxDay2.Name = "pictureBoxDay2";
-            this.pictureBoxDay2.Size = new System.Drawing.Size(87, 87);
-            this.pictureBoxDay2.TabIndex = 7;
-            this.pictureBoxDay2.TabStop = false;
-            // 
-            // pictureBoxDay3
-            // 
-            this.pictureBoxDay3.Location = new System.Drawing.Point(32, 51);
-            this.pictureBoxDay3.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBoxDay3.Name = "pictureBoxDay3";
-            this.pictureBoxDay3.Size = new System.Drawing.Size(87, 87);
-            this.pictureBoxDay3.TabIndex = 8;
-            this.pictureBoxDay3.TabStop = false;
-            // 
-            // pictureBoxDay4
-            // 
-            this.pictureBoxDay4.Location = new System.Drawing.Point(30, 46);
-            this.pictureBoxDay4.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBoxDay4.Name = "pictureBoxDay4";
-            this.pictureBoxDay4.Size = new System.Drawing.Size(87, 87);
-            this.pictureBoxDay4.TabIndex = 9;
-            this.pictureBoxDay4.TabStop = false;
             // 
             // MainForm
             // 
@@ -882,24 +882,24 @@
             this.sPanel1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDay4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.orchidSPanel1.ResumeLayout(false);
             this.orchidSPanel1.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDay3)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDay2)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDay1)).EndInit();
             this.orchidSPanel2.ResumeLayout(false);
             this.orchidSPanel2.PerformLayout();
             this.gbToday.ResumeLayout(false);
             this.gbToday.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCondition)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDay1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDay2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDay3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDay4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -108,24 +108,24 @@ namespace WeatherMelon
             }
 
             //besok 
-            lblHari1.Text = fourDaysAhead[0].date;
+            lblHari1.Text = DisplayDayDate(fourDaysAhead[0].date);
             lblTempDay1.Text = fourDaysAhead[0].minTemp;
             lblWeather1.Text = fourDaysAhead[0].condition;
             pictureBoxDay1.Image = fourDaysAhead[0].icon;
             //lusa
-            lblHari2.Text = fourDaysAhead[1].date;
+            lblHari2.Text = DisplayDayDate(fourDaysAhead[1].date);
             lblTempDay2.Text = fourDaysAhead[1].minTemp;
             lblWeather2.Text = fourDaysAhead[1].condition;
             pictureBoxDay2.Image = fourDaysAhead[1].icon;
 
             //3 hari setelah
-            lblHari3.Text = fourDaysAhead[2].date;
+            lblHari3.Text = DisplayDayDate(fourDaysAhead[2].date);
             lblTempDay3.Text = fourDaysAhead[2].minTemp;
             weather3.Text = fourDaysAhead[2].condition;
             pictureBoxDay3.Image = fourDaysAhead[2].icon;
 
             //4 hari setelah
-            lblHari4.Text = fourDaysAhead[3].date;
+            lblHari4.Text = DisplayDayDate(fourDaysAhead[3].date);
             lblTempDay4.Text = fourDaysAhead[3].minTemp;
             weather4.Text = fourDaysAhead[3].condition;
             pictureBoxDay4.Image = fourDaysAhead[3].icon;
@@ -150,6 +150,11 @@ namespace WeatherMelon
                 MessageBox.Show(ex.Message);
                 return null;
             }
+        }
+
+        private string DisplayDayDate(string date)
+        {
+            return String.Format("{0}\n{1}", DateTime.Parse(date).DayOfWeek, DateTime.Parse(date).ToShortDateString());
         }
 
         private void tbSearch_KeyDown(object sender, KeyEventArgs e)
