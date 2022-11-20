@@ -58,7 +58,6 @@ namespace WeatherMelon
                     dtl.GetForecast();
                     Displayer();
                     /*Get Icon PNG*/
-                    getIcon();
 
                     MessageBox.Show("Search berhasil!");
                 }
@@ -85,7 +84,12 @@ namespace WeatherMelon
             lbTemp.Text = dtl.avgTemp + "°C";
             lblHum.Text = dtl.humidity;
             lblWindSpeed.Text = dtl.avgwindk + " KpH";
-            
+
+            lblLocalTime.Text = dtl.localtime;
+
+            pictureBoxCondition.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBoxCondition.Image = getIcon(dtl.iconUrl);
+
             DataTable dt = dtl.GetNext4Days();
             List < DetailCuaca > fourDaysAhead = new List<DetailCuaca>();
             for (int i = 1; i < 5; i++)
@@ -94,6 +98,7 @@ namespace WeatherMelon
                 tempDtl.date = Convert.ToString(dt.Rows[i]["Tanggal"]);
                 tempDtl.minTemp = Convert.ToString(dt.Rows[i]["Temp"]);
                 tempDtl.condition = Convert.ToString(dt.Rows[i]["Kondisi"]);
+                tempDtl.icon = (Bitmap)dt.Rows[i]["Icon"];
                 fourDaysAhead.Add(tempDtl);
                 // MessageBox.Show(tempDtl.date);
             }
@@ -102,36 +107,39 @@ namespace WeatherMelon
             lblHari1.Text = fourDaysAhead[0].date;
             lblTempDay1.Text = fourDaysAhead[0].minTemp;
             lblWeather1.Text = fourDaysAhead[0].condition;
+            pictureBoxDay1.Image = fourDaysAhead[0].icon;
             //lusa
             lblHari2.Text = fourDaysAhead[1].date;
             lblTempDay2.Text = fourDaysAhead[1].minTemp;
             lblWeather2.Text = fourDaysAhead[1].condition;
+            pictureBoxDay2.Image = fourDaysAhead[1].icon;
 
             //3 hari setelah
             lblHari3.Text = fourDaysAhead[2].date;
             lblTempDay3.Text = fourDaysAhead[2].minTemp;
             weather3.Text = fourDaysAhead[2].condition;
+            pictureBoxDay3.Image = fourDaysAhead[2].icon;
 
             //4 hari setelah
             lblHari4.Text = fourDaysAhead[3].date;
             lblTempDay4.Text = fourDaysAhead[3].minTemp;
             weather4.Text = fourDaysAhead[3].condition;
-            lblLocalTime.Text = dtl.localtime;
+            pictureBoxDay4.Image = fourDaysAhead[3].icon;
+
         }
 
-        private void getIcon()
+        internal static Bitmap getIcon(string iconURL)
         {
             /*Client to donwload PNG from URL*/
             WebClient client = new WebClient();
 
-            byte[] image = client.DownloadData("http:" + dtl.iconUrl);
+            byte[] image = client.DownloadData("http:" + iconURL);
             MemoryStream stream = new MemoryStream(image);
             Bitmap newBitmap = new Bitmap(stream);
 
             Bitmap icon = newBitmap;
 
-            pictureBoxCondition.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBoxCondition.Image = icon;
+            return icon;
         }
 
         private void tbSearch_KeyDown(object sender, KeyEventArgs e)

@@ -34,6 +34,8 @@ namespace WeatherMelon
         public string localtime;
 
         public string iconUrl;
+
+        public Bitmap icon;
         public void GetForecast()
         {
             string url = string.Format("http://api.weatherapi.com/v1/forecast.xml?key=5aec79e3b7f241ac9be131349221311&q={0}&days=0&aqi=no&alerts=no", this.searched_city);
@@ -69,7 +71,7 @@ namespace WeatherMelon
             dt.Columns.Add("Tanggal", typeof(string));
             dt.Columns.Add("Temp", typeof(string));
             dt.Columns.Add("Kondisi", typeof(string));
-            dt.Columns.Add("Icon", typeof(string));
+            dt.Columns.Add("Icon", typeof(Bitmap));
 
             string url = String.Format("https://api.weatherapi.com/v1/forecast.xml?key=137c78c1a0874ace81c70453222011&q={0}&days=5&aqi=no&alerts=no", this.searched_city);
             XDocument doc = XDocument.Load(url);
@@ -77,20 +79,15 @@ namespace WeatherMelon
             {
                 string iconUrl = (string)npc.Descendants("icon").FirstOrDefault();
 
-                WebClient client = new WebClient();
-
-                byte[] image = client.DownloadData("http:" + iconUrl);
-
-                MemoryStream stream = new MemoryStream(image);
-
-                Bitmap newBitmap = new Bitmap(stream);
+                Bitmap newBitmap = MainForm.getIcon(iconUrl);
 
                 dt.Rows.Add(new object[]
                 {
-                      //display negara ditulis doc karena tidak berubah seiring waktu dalam loop.
+                    //display negara ditulis doc karena tidak berubah seiring waktu dalam loop.
                     (string)npc.Descendants("date").FirstOrDefault(),
                     (string)npc.Descendants("mintemp_c").FirstOrDefault(),
                     (string)npc.Descendants("text").FirstOrDefault(),
+                    
                     newBitmap
                 });
 
