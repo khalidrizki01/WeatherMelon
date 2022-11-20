@@ -19,3 +19,6 @@ Berikut adalah UML diagrams bagi aplikasi WeatherMelon:
 ![Fruit Lovers_Modul 2-TampilPrediksi seminggu ke depan drawio](https://user-images.githubusercontent.com/79208746/189718726-29e1e5d7-399a-4518-89c5-47187a4faf8c.png)
 ### Class Diagram
 ![Fruit Lovers_Modul 2-Class diagram drawio](https://user-images.githubusercontent.com/79208746/189718828-6d292a31-23da-496d-b781-ce148ca9eb0b.png)
+
+### Entity Relationship Diagram (ERD)
+![Fruit Lovers_Modul 2-ERD drawio](https://user-images.githubusercontent.com/79208746/192302928-4ec8fd9b-2209-419e-ae07-dc734161ede0.png)
