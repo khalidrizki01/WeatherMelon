@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.gbToday = new System.Windows.Forms.GroupBox();
             this.lbTemp = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblTodayWeather = new System.Windows.Forms.Label();
             this.lblToday = new System.Windows.Forms.Label();
@@ -75,6 +74,18 @@
             this.orchidSPanel1 = new WeatherMelon.OrchidSPanel();
             this.lblTodayHighlight = new System.Windows.Forms.Label();
             this.sPanel1 = new WeatherMelon.SPanel();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.lbCity = new System.Windows.Forms.Label();
             this.lblTitleRecommendation = new System.Windows.Forms.Label();
@@ -84,18 +95,6 @@
             this.lblWeatherMelon = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.gbToday.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -109,12 +108,12 @@
             this.orchidSPanel2.SuspendLayout();
             this.orchidSPanel1.SuspendLayout();
             this.sPanel1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbToday
@@ -122,47 +121,33 @@
             this.gbToday.AutoSize = true;
             this.gbToday.BackColor = System.Drawing.Color.Lavender;
             this.gbToday.Controls.Add(this.lbTemp);
-            this.gbToday.Controls.Add(this.label1);
             this.gbToday.Controls.Add(this.pictureBox1);
             this.gbToday.Controls.Add(this.lblTodayWeather);
             this.gbToday.Controls.Add(this.lblToday);
             this.gbToday.Location = new System.Drawing.Point(101, 315);
-            this.gbToday.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbToday.Margin = new System.Windows.Forms.Padding(4);
             this.gbToday.Name = "gbToday";
-            this.gbToday.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbToday.Padding = new System.Windows.Forms.Padding(4);
             this.gbToday.Size = new System.Drawing.Size(365, 448);
             this.gbToday.TabIndex = 0;
             this.gbToday.TabStop = false;
-            this.gbToday.Enter += new System.EventHandler(this.gbToday_Enter);
             // 
             // lbTemp
             // 
-            this.lbTemp.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTemp.Location = new System.Drawing.Point(112, 295);
+            this.lbTemp.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTemp.Location = new System.Drawing.Point(77, 301);
             this.lbTemp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbTemp.Name = "lbTemp";
             this.lbTemp.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbTemp.Size = new System.Drawing.Size(119, 74);
+            this.lbTemp.Size = new System.Drawing.Size(193, 46);
             this.lbTemp.TabIndex = 4;
-            this.lbTemp.Text = "lbTemp";
-            this.lbTemp.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(64, 177);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 29);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "°C";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbTemp.Text = "Temperature";
+            this.lbTemp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(48, 91);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(118, 99);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(132, 128);
             this.pictureBox1.TabIndex = 2;
@@ -179,7 +164,6 @@
             this.lblTodayWeather.TabIndex = 1;
             this.lblTodayWeather.Text = "Today Weather";
             this.lblTodayWeather.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblTodayWeather.Click += new System.EventHandler(this.lblTodayWeather_Click);
             // 
             // lblToday
             // 
@@ -239,7 +223,7 @@
             this.lblTglTomorrow.AutoSize = true;
             this.lblTglTomorrow.Location = new System.Drawing.Point(26, 16);
             this.lblTglTomorrow.Name = "lblTglTomorrow";
-            this.lblTglTomorrow.Size = new System.Drawing.Size(105, 17);
+            this.lblTglTomorrow.Size = new System.Drawing.Size(102, 16);
             this.lblTglTomorrow.TabIndex = 0;
             this.lblTglTomorrow.Text = "lblTglTomorrow";
             // 
@@ -290,7 +274,7 @@
             this.lblTgl3.AutoSize = true;
             this.lblTgl3.Location = new System.Drawing.Point(49, 16);
             this.lblTgl3.Name = "lblTgl3";
-            this.lblTgl3.Size = new System.Drawing.Size(50, 17);
+            this.lblTgl3.Size = new System.Drawing.Size(48, 16);
             this.lblTgl3.TabIndex = 1;
             this.lblTgl3.Text = "lblTgl3";
             // 
@@ -329,7 +313,7 @@
             this.lblTgl4.AutoSize = true;
             this.lblTgl4.Location = new System.Drawing.Point(50, 16);
             this.lblTgl4.Name = "lblTgl4";
-            this.lblTgl4.Size = new System.Drawing.Size(50, 17);
+            this.lblTgl4.Size = new System.Drawing.Size(48, 16);
             this.lblTgl4.TabIndex = 2;
             this.lblTgl4.Text = "lblTgl4";
             // 
@@ -380,7 +364,7 @@
             this.lblTgl5.AutoSize = true;
             this.lblTgl5.Location = new System.Drawing.Point(50, 16);
             this.lblTgl5.Name = "lblTgl5";
-            this.lblTgl5.Size = new System.Drawing.Size(50, 17);
+            this.lblTgl5.Size = new System.Drawing.Size(48, 16);
             this.lblTgl5.TabIndex = 8;
             this.lblTgl5.Text = "lblTgl5";
             // 
@@ -395,7 +379,7 @@
             // 
             this.tbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbSearch.Location = new System.Drawing.Point(1101, 188);
-            this.tbSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbSearch.Margin = new System.Windows.Forms.Padding(4);
             this.tbSearch.Name = "tbSearch";
             this.tbSearch.Size = new System.Drawing.Size(288, 34);
             this.tbSearch.TabIndex = 3;
@@ -520,7 +504,7 @@
             // 
             this.btFavCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btFavCity.Location = new System.Drawing.Point(1231, 98);
-            this.btFavCity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btFavCity.Margin = new System.Windows.Forms.Padding(4);
             this.btFavCity.Name = "btFavCity";
             this.btFavCity.Size = new System.Drawing.Size(160, 28);
             this.btFavCity.TabIndex = 18;
@@ -532,7 +516,7 @@
             this.btnSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearch.BackgroundImage")));
             this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSearch.Location = new System.Drawing.Point(1388, 188);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(69, 36);
             this.btnSearch.TabIndex = 20;
@@ -545,7 +529,7 @@
             this.orchidSPanel2.BackColor = System.Drawing.Color.Transparent;
             this.orchidSPanel2.Controls.Add(this.lblNext4Days);
             this.orchidSPanel2.Location = new System.Drawing.Point(843, 266);
-            this.orchidSPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.orchidSPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.orchidSPanel2.Name = "orchidSPanel2";
             this.orchidSPanel2.Size = new System.Drawing.Size(367, 42);
             this.orchidSPanel2.TabIndex = 23;
@@ -568,7 +552,7 @@
             this.orchidSPanel1.BackColor = System.Drawing.Color.Transparent;
             this.orchidSPanel1.Controls.Add(this.lblTodayHighlight);
             this.orchidSPanel1.Location = new System.Drawing.Point(843, 609);
-            this.orchidSPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.orchidSPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.orchidSPanel1.Name = "orchidSPanel1";
             this.orchidSPanel1.Size = new System.Drawing.Size(367, 42);
             this.orchidSPanel1.TabIndex = 22;
@@ -597,15 +581,135 @@
             this.sPanel1.Controls.Add(this.orchidSPanel2);
             this.sPanel1.Controls.Add(this.lbCity);
             this.sPanel1.Location = new System.Drawing.Point(0, 0);
-            this.sPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.sPanel1.Name = "sPanel1";
             this.sPanel1.Size = new System.Drawing.Size(1573, 844);
             this.sPanel1.TabIndex = 21;
             // 
+            // groupBox3
+            // 
+            this.groupBox3.BackColor = System.Drawing.Color.GhostWhite;
+            this.groupBox3.Controls.Add(this.label10);
+            this.groupBox3.Controls.Add(this.label9);
+            this.groupBox3.Location = new System.Drawing.Point(1218, 319);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(200, 265);
+            this.groupBox3.TabIndex = 27;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "groupBox3";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(72, 193);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(51, 16);
+            this.label10.TabIndex = 5;
+            this.label10.Text = "label10";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(72, 104);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(44, 16);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "label9";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.BackColor = System.Drawing.Color.GhostWhite;
+            this.groupBox4.Controls.Add(this.label8);
+            this.groupBox4.Controls.Add(this.label7);
+            this.groupBox4.Location = new System.Drawing.Point(1004, 317);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(200, 267);
+            this.groupBox4.TabIndex = 26;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "groupBox3";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(76, 195);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(44, 16);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "label8";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(76, 106);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(44, 16);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "label7";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.GhostWhite;
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Location = new System.Drawing.Point(785, 317);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(200, 267);
+            this.groupBox2.TabIndex = 25;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "groupBox2";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(76, 197);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(44, 16);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "label6";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(76, 106);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(44, 16);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "label5";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.GhostWhite;
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Location = new System.Drawing.Point(563, 317);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 267);
+            this.groupBox1.TabIndex = 24;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(71, 200);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(44, 16);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "label4";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(71, 106);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(44, 16);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "label3";
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(224, 68);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 17;
@@ -620,10 +724,9 @@
             this.lbCity.Location = new System.Drawing.Point(215, 185);
             this.lbCity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbCity.Name = "lbCity";
-            this.lbCity.Size = new System.Drawing.Size(126, 46);
+            this.lbCity.Size = new System.Drawing.Size(93, 46);
             this.lbCity.TabIndex = 9;
-            this.lbCity.Text = "lbCity";
-            this.lbCity.Click += new System.EventHandler(this.lbCity_Click);
+            this.lbCity.Text = "City";
             // 
             // lblTitleRecommendation
             // 
@@ -691,7 +794,7 @@
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
             this.pictureBox6.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.InitialImage")));
             this.pictureBox6.Location = new System.Drawing.Point(97, 177);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(83, 75);
             this.pictureBox6.TabIndex = 28;
@@ -701,132 +804,11 @@
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
             this.pictureBox7.Location = new System.Drawing.Point(433, 207);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(45, 37);
             this.pictureBox7.TabIndex = 29;
             this.pictureBox7.TabStop = false;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.GhostWhite;
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(563, 317);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 267);
-            this.groupBox1.TabIndex = 24;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.BackColor = System.Drawing.Color.GhostWhite;
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Location = new System.Drawing.Point(785, 317);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(200, 267);
-            this.groupBox2.TabIndex = 25;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.BackColor = System.Drawing.Color.GhostWhite;
-            this.groupBox4.Controls.Add(this.label8);
-            this.groupBox4.Controls.Add(this.label7);
-            this.groupBox4.Location = new System.Drawing.Point(1004, 317);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(200, 267);
-            this.groupBox4.TabIndex = 26;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "groupBox3";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.BackColor = System.Drawing.Color.GhostWhite;
-            this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Location = new System.Drawing.Point(1218, 319);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(200, 265);
-            this.groupBox3.TabIndex = 27;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "groupBox3";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(71, 106);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 17);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "label3";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(71, 200);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 17);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "label4";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(76, 106);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 17);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "label5";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(76, 197);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(46, 17);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "label6";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(76, 106);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(46, 17);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "label7";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(76, 195);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(46, 17);
-            this.label8.TabIndex = 3;
-            this.label8.Text = "label8";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(72, 104);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(46, 17);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "label9";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(72, 193);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(54, 17);
-            this.label10.TabIndex = 5;
-            this.label10.Text = "label10";
             // 
             // MainForm
             // 
@@ -857,7 +839,7 @@
             this.Controls.Add(this.gbToday);
             this.Controls.Add(this.sPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
             this.Text = "WeatherMelon";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
@@ -882,16 +864,16 @@
             this.orchidSPanel1.PerformLayout();
             this.sPanel1.ResumeLayout(false);
             this.sPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -920,7 +902,6 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label lblTomorrow;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblWeather3;
         private System.Windows.Forms.Label lblWeather4;
