@@ -159,11 +159,6 @@
             // 
             // pictureBoxCondition
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(88, 80);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(99, 104);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             this.pictureBoxCondition.Location = new System.Drawing.Point(77, 99);
             this.pictureBoxCondition.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBoxCondition.Name = "pictureBoxCondition";
@@ -425,16 +420,7 @@
             this.lblHum.Size = new System.Drawing.Size(49, 16);
             this.lblHum.TabIndex = 6;
             this.lblHum.Text = "lblHum";
-            // 
-            // lblMaxWS
-            // 
-            this.lblMaxWS.AutoSize = true;
-            this.lblMaxWS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaxWS.Location = new System.Drawing.Point(794, 578);
-            this.lblMaxWS.Name = "lblMaxWS";
-            this.lblMaxWS.Size = new System.Drawing.Size(54, 16);
-            this.lblMaxWS.TabIndex = 7;
-            this.lblMaxWS.Text = "MaxWS";
+
             // 
             // lblMaxTemp
             // 
@@ -445,36 +431,6 @@
             this.lblMaxTemp.Size = new System.Drawing.Size(82, 16);
             this.lblMaxTemp.TabIndex = 8;
             this.lblMaxTemp.Text = "lblMaxTemp";
-            // 
-            // lblMaxWSNo
-            // 
-            this.lblMaxWSNo.AutoSize = true;
-            this.lblMaxWSNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaxWSNo.Location = new System.Drawing.Point(857, 578);
-            this.lblMaxWSNo.Name = "lblMaxWSNo";
-            this.lblMaxWSNo.Size = new System.Drawing.Size(64, 16);
-            this.lblMaxWSNo.TabIndex = 11;
-            this.lblMaxWSNo.Text = "lblMaxNo";
-            // 
-            // lblMin
-            // 
-            this.lblMin.AutoSize = true;
-            this.lblMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMin.Location = new System.Drawing.Point(794, 609);
-            this.lblMin.Name = "lblMin";
-            this.lblMin.Size = new System.Drawing.Size(50, 16);
-            this.lblMin.TabIndex = 12;
-            this.lblMin.Text = "MinWS";
-            // 
-            // lblMinWSNo
-            // 
-            this.lblMinWSNo.AutoSize = true;
-            this.lblMinWSNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMinWSNo.Location = new System.Drawing.Point(857, 609);
-            this.lblMinWSNo.Name = "lblMinWSNo";
-            this.lblMinWSNo.Size = new System.Drawing.Size(60, 16);
-            this.lblMinWSNo.TabIndex = 13;
-            this.lblMinWSNo.Text = "lblMinNo";
             // 
             // lblMaxTempNo
             // 
