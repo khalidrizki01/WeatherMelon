@@ -83,7 +83,37 @@ namespace WeatherMelon
             lbTemp.Text = dtl.avgTemp + "°C";
             lblHum.Text = dtl.humidity;
             lblWindSpeed.Text = dtl.avgwindk + " KpH";
+            
+            DataTable dt = dtl.GetNext4Days();
+            List < DetailCuaca > fourDaysAhead = new List<DetailCuaca>();
+            for (int i = 1; i < 5; i++)
+            {
+                DetailCuaca tempDtl = new DetailCuaca();
+                tempDtl.date = Convert.ToString(dt.Rows[i]["Tanggal"]);
+                tempDtl.minTemp = Convert.ToString(dt.Rows[i]["Temp"]);
+                tempDtl.condition = Convert.ToString(dt.Rows[i]["Kondisi"]);
+                fourDaysAhead.Add(tempDtl);
+                // MessageBox.Show(tempDtl.date);
+            }
 
+            //besok 
+            lblHari1.Text = fourDaysAhead[0].date;
+            lblTempDay1.Text = fourDaysAhead[0].minTemp;
+            lblWeather1.Text = fourDaysAhead[0].condition;
+            //lusa
+            lblHari2.Text = fourDaysAhead[1].date;
+            lblTempDay2.Text = fourDaysAhead[1].minTemp;
+            lblWeather2.Text = fourDaysAhead[1].condition;
+
+            //3 hari setelah
+            lblHari3.Text = fourDaysAhead[2].date;
+            lblTempDay3.Text = fourDaysAhead[2].minTemp;
+            weather3.Text = fourDaysAhead[2].condition;
+
+            //4 hari setelah
+            lblHari4.Text = fourDaysAhead[3].date;
+            lblTempDay4.Text = fourDaysAhead[3].minTemp;
+            weather4.Text = fourDaysAhead[3].condition;
             lblLocalTime.Text = dtl.localtime;
         }
 
@@ -109,5 +139,7 @@ namespace WeatherMelon
                 btnSearch_Click(sender, e);
             }
         }
+        
     }
+    
 }
