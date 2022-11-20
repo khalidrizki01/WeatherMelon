@@ -71,7 +71,7 @@ namespace WeatherMelon
             dt.Columns.Add("Kondisi", typeof(string));
             dt.Columns.Add("Icon", typeof(string));
 
-            string url = String.Format("https://api.weatherapi.com/v1/forecast.xml?key=137c78c1a0874ace81c70453222011&q={0}&days=5&aqi=no&alerts=no", this.city);
+            string url = String.Format("https://api.weatherapi.com/v1/forecast.xml?key=137c78c1a0874ace81c70453222011&q={0}&days=5&aqi=no&alerts=no", this.searched_city);
             XDocument doc = XDocument.Load(url);
             foreach (var npc in doc.Descendants("forecastday")) //loop untuk mengambil data API.
             {
