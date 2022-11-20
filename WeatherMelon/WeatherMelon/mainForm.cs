@@ -57,14 +57,13 @@ namespace WeatherMelon
                     dtl.searched_city = tbSearch.Text;
                     dtl.GetForecast();
                     Displayer();
-                    /*Get Icon PNG*/
 
                     MessageBox.Show("Search berhasil!");
                 }
 
-                catch (Exception ex)
+                catch (Exception)
                 {
-                    MessageBox.Show(ex.Message + "\n karena Daerah tidak dikenali");
+                    MessageBox.Show("Daerah tidak dikenali!");
                 }
             }
         }
@@ -90,8 +89,13 @@ namespace WeatherMelon
             pictureBoxCondition.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBoxCondition.Image = getIcon(dtl.iconUrl);
 
+            Displayer_4Days(); 
+        }
+
+        private void Displayer_4Days()
+        {
             DataTable dt = dtl.GetNext4Days();
-            List < DetailCuaca > fourDaysAhead = new List<DetailCuaca>();
+            List<DetailCuaca> fourDaysAhead = new List<DetailCuaca>();
             for (int i = 1; i < 5; i++)
             {
                 DetailCuaca tempDtl = new DetailCuaca();
@@ -125,21 +129,27 @@ namespace WeatherMelon
             lblTempDay4.Text = fourDaysAhead[3].minTemp;
             weather4.Text = fourDaysAhead[3].condition;
             pictureBoxDay4.Image = fourDaysAhead[3].icon;
-
         }
 
         internal static Bitmap getIcon(string iconURL)
         {
-            /*Client to donwload PNG from URL*/
-            WebClient client = new WebClient();
+            try
+            {
+                /*Client to donwload PNG from URL*/
+                WebClient client = new WebClient();
 
-            byte[] image = client.DownloadData("http:" + iconURL);
-            MemoryStream stream = new MemoryStream(image);
-            Bitmap newBitmap = new Bitmap(stream);
+                byte[] image = client.DownloadData("http:" + iconURL);
+                MemoryStream stream = new MemoryStream(image);
+                Bitmap newBitmap = new Bitmap(stream);
 
-            Bitmap icon = newBitmap;
-
-            return icon;
+                Bitmap icon = newBitmap;
+                return icon;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
         }
 
         private void tbSearch_KeyDown(object sender, KeyEventArgs e)
