@@ -59,8 +59,6 @@ namespace WeatherMelon
                     Displayer();
                     /*Get Icon PNG*/
                     getIcon();
-
-                    MessageBox.Show("Search berhasil!");
                 }
 
                 catch (Exception ex)

@@ -163,16 +163,6 @@
         81+sf7N+g6Zonwm0ZtO060sDcoZZzawLH5r5I3NtA3HAAyaKK8nMf4S9TOpsf//Z
 </value>
   </data>
-  <data name="pictureBox7.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACIAAAAeCAYAAABJ/8wUAAAABGdBTUEAALGPC/xhBQAAARdJREFUWEft
-        j8ERhCAMRRkL8WgRjjersQX7sQvLsAFvduGCk+wGDEhQ0cO+mTgQ8vO/ag2glLJKQtM0Iv3u1RX7ygc3
-        6xaH1T0SSN6naYLuD/puivK9+QY4uFm8930PHT+sfvswD0dQjVRrcDVWECmoS9EaqFZVVXV62TzPcJNh
-        BaGX3HRd944gBvT/B0GMd1mWzwah3tv3qTDvD5IzjOv3PeUMgl5sEEOuMJwPG+TOML79u86dYUJ72e4d
-        YXBf27bQsfE6XRkG99R1DZ09QZcrwqB+HEfo8Bw6pIYZhkGki5oqikK2FGZj5w2i34wxiJnhkE1rQkah
-        tyPkCg1nyPUkpKk01JhWKulKzRUBkNMblmWB0xnW9QPDY7quAH/9nQAAAABJRU5ErkJggg==
-</value>
-  </data>
   <data name="pictureBox6.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAABGdBTUEAALGPC/xhBQAABYRJREFUaEPF
@@ -229,6 +219,16 @@
         JXp5YG3M6uFVJzdw52v8ZXBwkGtCBquDsW7hWsMA+/wHXntigfcmSQ2McRNXGwbIZsDIiaixsZHzu43r
         GUS3d7B1e3V1xR3X3XK1gvtf6S/eXvj+s56eHlS7i08aBqKiooSNgtl5/1kXnzUMiJoF8yW+zfbL/9ks
         4POMh4eH/zULn32N77/iXxYWFjzmewzjH773jyTFaQoDAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="pictureBox7.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACIAAAAeCAYAAABJ/8wUAAAABGdBTUEAALGPC/xhBQAAARdJREFUWEft
+        j8ERhCAMRRkL8WgRjjersQX7sQvLsAFvduGCk+wGDEhQ0cO+mTgQ8vO/ag2glLJKQtM0Iv3u1RX7ygc3
+        6xaH1T0SSN6naYLuD/puivK9+QY4uFm8930PHT+sfvswD0dQjVRrcDVWECmoS9EaqFZVVXV62TzPcJNh
+        BaGX3HRd944gBvT/B0GMd1mWzwah3tv3qTDvD5IzjOv3PeUMgl5sEEOuMJwPG+TOML79u86dYUJ72e4d
+        YXBf27bQsfE6XRkG99R1DZ09QZcrwqB+HEfo8Bw6pIYZhkGki5oqikK2FGZj5w2i34wxiJnhkE1rQkah
+        tyPkCg1nyPUkpKk01JhWKulKzRUBkNMblmWB0xnW9QPDY7quAH/9nQAAAABJRU5ErkJggg==
 </value>
   </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
