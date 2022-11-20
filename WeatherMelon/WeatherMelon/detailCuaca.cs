@@ -1,7 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Diagnostics.Metrics;
+using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -24,6 +28,7 @@ namespace WeatherMelon
 
         public string humidity;
         public string condition;
+        public string date;
 
         public string localtime;
 
@@ -62,6 +67,41 @@ namespace WeatherMelon
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        public DataTable GetNext4Days()
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Tanggal", typeof(string));
+            dt.Columns.Add("Temp", typeof(string));
+            dt.Columns.Add("Kondisi", typeof(string));
+            dt.Columns.Add("Icon", typeof(string));
+
+            string url = String.Format("https://api.weatherapi.com/v1/forecast.xml?key=137c78c1a0874ace81c70453222011&q={0}&days=5&aqi=no&alerts=no", this.city);
+            XDocument doc = XDocument.Load(url);
+            foreach (var npc in doc.Descendants("forecastday")) //loop untuk mengambil data API.
+            {
+                string iconUrl = (string)npc.Descendants("icon").FirstOrDefault();
+
+                WebClient client = new WebClient();
+
+                byte[] image = client.DownloadData("http:" + iconUrl);
+
+                MemoryStream stream = new MemoryStream(image);
+
+                Bitmap newBitmap = new Bitmap(stream);
+
+                dt.Rows.Add(new object[]
+                {
+                      //display negara ditulis doc karena tidak berubah seiring waktu dalam loop.
+                    (string)npc.Descendants("date").FirstOrDefault(),
+                    (string)npc.Descendants("mintemp_c").FirstOrDefault(),
+                    (string)npc.Descendants("text").FirstOrDefault(),
+                    newBitmap
+                });
+
+            }
+            return dt;
         }
     }
 
