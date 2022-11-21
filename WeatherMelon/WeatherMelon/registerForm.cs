@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WeatherMelon.Properties;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace WeatherMelon
@@ -19,9 +20,11 @@ namespace WeatherMelon
         private string query;
         private NpgsqlCommand cmd;
         private DataTable dt;
-
+        private bool hidePassword = true;
+        Akun akun;
 
         public LoginForm LoginForm { get => loginForm; set => loginForm = value; }
+        
 
         public RegisterForm(LoginForm loginForm)
         {
@@ -58,8 +61,9 @@ namespace WeatherMelon
 
                 if (dt.Rows.Count != 0)
                 {
+                    
                     MessageBox.Show("Registrasi Berkendala");
-/*                    MainForm objForm1 = new MainForm();
+                    /*MainForm objForm1 = new MainForm(akun);
                     this.Hide();
                     objForm1.Show();*/
 
@@ -70,9 +74,9 @@ namespace WeatherMelon
                 }
                 else
                 {
-                    MessageBox.Show("Registrasi berhasil");
+                    MessageBox.Show("Registrasi berhasil, silakan log in");
                 }
-
+                this.Close();
             }
 
             catch (Exception ex)
@@ -101,8 +105,14 @@ namespace WeatherMelon
 
         private void RegisterForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            loginForm.Show();
+            //Application.Exit();
         }
 
+        private void cbShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            hidePassword = !hidePassword;
+            tbPasswordRegist.UseSystemPasswordChar = hidePassword;
+        }
     }
 }

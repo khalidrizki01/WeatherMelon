@@ -33,6 +33,7 @@
             this.tbPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.lblRegister = new System.Windows.Forms.Label();
+            this.cbShowPassword = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // tbEmail
@@ -48,12 +49,14 @@
             this.tbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 27F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbPassword.Location = new System.Drawing.Point(155, 401);
             this.tbPassword.Name = "tbPassword";
-            this.tbPassword.Size = new System.Drawing.Size(415, 48);
+            this.tbPassword.Size = new System.Drawing.Size(317, 48);
             this.tbPassword.TabIndex = 1;
+            this.tbPassword.UseSystemPasswordChar = true;
             // 
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.Color.Indigo;
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ControlLight;
@@ -77,14 +80,27 @@
             this.lblRegister.Size = new System.Drawing.Size(76, 18);
             this.lblRegister.TabIndex = 3;
             this.lblRegister.Text = "Register";
-            this.lblRegister.DoubleClick += new System.EventHandler(this.lblRegister_DoubleClick);
+            this.lblRegister.Click += new System.EventHandler(this.lblRegister_Click);
+            // 
+            // cbShowPassword
+            // 
+            this.cbShowPassword.BackColor = System.Drawing.Color.Transparent;
+            this.cbShowPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbShowPassword.Location = new System.Drawing.Point(475, 405);
+            this.cbShowPassword.Name = "cbShowPassword";
+            this.cbShowPassword.Size = new System.Drawing.Size(95, 44);
+            this.cbShowPassword.TabIndex = 4;
+            this.cbShowPassword.Text = "Show Password";
+            this.cbShowPassword.UseVisualStyleBackColor = false;
+            this.cbShowPassword.CheckedChanged += new System.EventHandler(this.cbShowPassword_CheckedChanged);
             // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1262, 790);
+            this.ClientSize = new System.Drawing.Size(1262, 749);
+            this.Controls.Add(this.cbShowPassword);
             this.Controls.Add(this.lblRegister);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.tbPassword);
@@ -105,5 +121,6 @@
         private System.Windows.Forms.TextBox tbPassword;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label lblRegister;
+        private System.Windows.Forms.CheckBox cbShowPassword;
     }
 }

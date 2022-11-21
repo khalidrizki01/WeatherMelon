@@ -17,10 +17,17 @@ namespace WeatherMelon
         /*Constructor for DetailCuaca.cs*/
         private readonly DetailCuaca dtl = new DetailCuaca();
         private List<string> listAutofill = new List<string>();
+        Akun akun;
 
-        public MainForm()
+        public MainForm(Akun akun)
         {
             InitializeComponent();
+            this.akun = akun;
+            dtl.searched_city = akun.tempatTinggal;
+            dtl.GetForecast();
+            Displayer();
+            tbSearch.Text = "";
+
             listAutofill = dtl.Autofill();
             foreach (string kota in listAutofill)
             {
@@ -102,24 +109,24 @@ namespace WeatherMelon
 
             //besok 
             lblHari1.Text = DisplayDayDate(fourDaysAhead[0].date);
-            lblTempDay1.Text = fourDaysAhead[0].minTemp;
+            lblTempDay1.Text = String.Format(fourDaysAhead[0].minTemp+ " °C");
             lblWeather1.Text = fourDaysAhead[0].condition;
             pictureBoxDay1.Image = fourDaysAhead[0].icon;
             //lusa
             lblHari2.Text = DisplayDayDate(fourDaysAhead[1].date);
-            lblTempDay2.Text = fourDaysAhead[1].minTemp;
+            lblTempDay2.Text = String.Format(fourDaysAhead[1].minTemp + " °C");
             lblWeather2.Text = fourDaysAhead[1].condition;
             pictureBoxDay2.Image = fourDaysAhead[1].icon;
 
             //3 hari setelah
             lblHari3.Text = DisplayDayDate(fourDaysAhead[2].date);
-            lblTempDay3.Text = fourDaysAhead[2].minTemp;
+            lblTempDay3.Text = String.Format(fourDaysAhead[2].minTemp + " °C");
             weather3.Text = fourDaysAhead[2].condition;
             pictureBoxDay3.Image = fourDaysAhead[2].icon;
 
             //4 hari setelah
             lblHari4.Text = DisplayDayDate(fourDaysAhead[3].date);
-            lblTempDay4.Text = fourDaysAhead[3].minTemp;
+            lblTempDay4.Text = String.Format(fourDaysAhead[3].minTemp + " °C");
             weather4.Text = fourDaysAhead[3].condition;
             pictureBoxDay4.Image = fourDaysAhead[3].icon;
         }
