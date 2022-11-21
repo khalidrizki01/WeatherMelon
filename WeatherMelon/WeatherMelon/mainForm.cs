@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Npgsql;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -37,8 +39,12 @@ namespace WeatherMelon
                 tbSearch.AutoCompleteSource = AutoCompleteSource.CustomSource;
             }
 
-
         }
+
+        private NpgsqlConnection conn = new NpgsqlConnection(LoginForm.connstring);
+        private string query;
+        private NpgsqlCommand cmd;
+        private DataTable dt;
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -195,6 +201,54 @@ namespace WeatherMelon
             bookmarked = !bookmarked;
             if(bookmarked) pictureBookmark.BackColor = System.Drawing.Color.DarkSlateBlue;
             else pictureBookmark.BackColor = System.Drawing.Color.White;
+
+            SaveFavorite();
+        }
+
+        private void SaveFavorite()
+        {
+            try
+            {
+                if (conn.State != ConnectionState.Open)
+                {
+                    conn.Close();
+                    conn.Open();
+                }
+                query = "INSERT INTO tablefavorit(id_user,kota) VALUES ('" + akun.id + "', '" + dtl.resulting_city.Trim() + "')";
+
+                cmd = new NpgsqlCommand(query, conn);
+
+                dt = new DataTable();
+
+                NpgsqlDataReader rd = cmd.ExecuteReader();
+
+                dt.Load(rd);
+
+                if (dt.Rows.Count != 0)
+                {
+
+                    MessageBox.Show("Registrasi Berkendala");
+                    /*MainForm objForm1 = new MainForm(akun);
+                    this.Hide();
+                    objForm1.Show();*/
+
+                }
+                else
+                {
+                    MessageBox.Show("Registrasi berhasil");
+                }
+            }
+
+            catch (PostgresException ex)
+            {
+                MessageBox.Show("Error Kota sudah terbookmark", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error : " + ex.Message, "Failed",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
     }

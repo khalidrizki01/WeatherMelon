@@ -325,7 +325,7 @@
             // 
             this.tbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbSearch.Location = new System.Drawing.Point(1101, 188);
-            this.tbSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbSearch.Margin = new System.Windows.Forms.Padding(4);
             this.tbSearch.Name = "tbSearch";
             this.tbSearch.Size = new System.Drawing.Size(288, 34);
             this.tbSearch.TabIndex = 3;
@@ -354,7 +354,7 @@
             // 
             this.btFavCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btFavCity.Location = new System.Drawing.Point(1231, 98);
-            this.btFavCity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btFavCity.Margin = new System.Windows.Forms.Padding(4);
             this.btFavCity.Name = "btFavCity";
             this.btFavCity.Size = new System.Drawing.Size(160, 28);
             this.btFavCity.TabIndex = 18;
@@ -367,7 +367,7 @@
             this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSearch.Location = new System.Drawing.Point(1388, 188);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(69, 36);
             this.btnSearch.TabIndex = 20;
@@ -389,17 +389,15 @@
             // 
             // pictureBookmark
             // 
-
             this.pictureBookmark.BackColor = System.Drawing.Color.White;
             this.pictureBookmark.Image = ((System.Drawing.Image)(resources.GetObject("pictureBookmark.Image")));
-            this.pictureBookmark.Location = new System.Drawing.Point(433, 207);
+            this.pictureBookmark.Location = new System.Drawing.Point(429, 202);
             this.pictureBookmark.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBookmark.Name = "pictureBookmark";
-            this.pictureBookmark.Size = new System.Drawing.Size(34, 30);
+            this.pictureBookmark.Size = new System.Drawing.Size(50, 50);
             this.pictureBookmark.TabIndex = 29;
             this.pictureBookmark.TabStop = false;
             this.pictureBookmark.Click += new System.EventHandler(this.pictureBookmark_Click);
-
             // 
             // sPanel1
             // 
@@ -861,8 +859,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-
-            this.ClientSize = new System.Drawing.Size(1130, 678);
+            this.ClientSize = new System.Drawing.Size(1513, 844);
             this.Controls.Add(this.pictureBookmark);
             this.Controls.Add(this.lblTitleTemp);
             this.Controls.Add(this.btnSearch);
@@ -871,7 +868,7 @@
             this.Controls.Add(this.tbSearch);
             this.Controls.Add(this.sPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
             this.Text = "WeatherMelon";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
@@ -947,7 +944,6 @@
         private System.Windows.Forms.Label lbTemp;
         private System.Windows.Forms.Label lblRec;
         private System.Windows.Forms.Label lblHum;
-        private System.Windows.Forms.Label lbCity;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btFavCity;
         private System.Windows.Forms.Button btnSearch;
@@ -987,6 +983,7 @@
         private System.Windows.Forms.PictureBox pictureBoxDay3;
         private System.Windows.Forms.PictureBox pictureBoxDay2;
         private System.Windows.Forms.PictureBox pictureBoxDay1;
+        internal System.Windows.Forms.Label lbCity;
     }
 }
 

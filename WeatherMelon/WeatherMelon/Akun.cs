@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +18,8 @@ namespace WeatherMelon
         // public string email;
         public string tempatTinggal;
 
+        LoginForm loginForm;
+
         public Akun(int id, string username, string password, string tempatTinggal)
         {
             this.id = id;
@@ -24,5 +28,6 @@ namespace WeatherMelon
             // this.email = email;
             this.tempatTinggal = tempatTinggal;
         }
+
     }
 }
