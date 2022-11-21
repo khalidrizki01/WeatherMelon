@@ -68,20 +68,20 @@ namespace WeatherMelon
                     objForm1.Show();*/
 
                 }
-                else if (tbEmailRegist.Text == "" || tbPasswordRegist.Text == "")
+                else if (tbEmailRegist.Text == "" || tbPasswordRegist.Text == "" || tbCityRegist.Text=="" || tbNameRegist.Text=="")
                 {
-                    MessageBox.Show("Tidak ada input");
+                    MessageBox.Show("Harap isi seluruh kolom", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    MessageBox.Show("Registrasi berhasil, silakan log in");
+                    MessageBox.Show("Registrasi berhasil, silakan log in", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 this.Close();
             }
 
             catch (PostgresException ex)
             {
-                MessageBox.Show("Error : Email sudah terdaftar", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Email sudah terdaftar", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             catch (Exception ex)

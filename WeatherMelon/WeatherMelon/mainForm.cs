@@ -55,7 +55,7 @@ namespace WeatherMelon
         {
             if (tbSearch.Text == "")
             {
-                MessageBox.Show("Search Box Kosong!");
+                MessageBox.Show("Search Box Kosong!", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -65,13 +65,12 @@ namespace WeatherMelon
                     dtl.searched_city = tbSearch.Text;
                     dtl.GetForecast();
                     Displayer();
-
-                    MessageBox.Show("Search berhasil!");
+                    MessageBox.Show("Search berhasil!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
                 catch (Exception)
                 {
-                    MessageBox.Show("Daerah tidak dikenali!");
+                    MessageBox.Show("Daerah tidak dikenali!", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -173,7 +172,7 @@ namespace WeatherMelon
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Error : " + ex.Message, "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
         }
@@ -235,13 +234,13 @@ namespace WeatherMelon
                 }
                 else
                 {
-                    MessageBox.Show("Registrasi berhasil");
+                    MessageBox.Show("Bookmark berhasil", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
 
             catch (PostgresException ex)
             {
-                MessageBox.Show("Error Kota sudah terbookmark", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Kota sudah dibookmark", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             catch (Exception ex)

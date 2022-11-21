@@ -49,7 +49,7 @@ namespace WeatherMelon
                 {
                     // dataGridView1.DataSource = dt;
                     Akun akun = new Akun((Int32)dt.Rows[0]["id"], dt.Rows[0]["username"].ToString(), dt.Rows[0]["password"].ToString(), dt.Rows[0]["favcity"].ToString());
-                    MessageBox.Show("Login berhasil: {0}", akun.id.ToString());
+                    MessageBox.Show("Login berhasil", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     MainForm objForm1 = new MainForm(akun);
                     this.Hide();
@@ -58,15 +58,17 @@ namespace WeatherMelon
                 }
                 else if (tbPassword.Text == "" || tbEmail.Text == "")
                 {
-                    MessageBox.Show("Tidak ada input");
+                    MessageBox.Show("Harap isi email dan password", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
-                    MessageBox.Show("Username belum terdaftar atau salah");
+                {
+                    MessageBox.Show("Email belum terdaftar atau salah", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
 
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Error : "+ex.Message, "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
