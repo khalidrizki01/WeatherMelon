@@ -76,6 +76,7 @@ namespace WeatherMelon
             lbTemp.Font = new Font("Microsoft Sans Serif", 24, FontStyle.Bold);
             lblHum.Font = new Font("Microsoft Sans Serif", 22, FontStyle.Bold);
             lblWindSpeed.Font = new Font("Microsoft Sans Serif", 22, FontStyle.Bold);
+            lblRec.Font = new Font("Microsoft Sans Serif", 12, FontStyle.Bold);
 
             /*Assigning Values*/
             lbCity.Text = dtl.resulting_city;
@@ -91,7 +92,9 @@ namespace WeatherMelon
             pictureBoxCondition.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBoxCondition.Image = getIcon(dtl.iconUrl);
 
-            Displayer_4Days(); 
+            Displayer_4Days();
+
+            RecommendAction();
         }
 
         private void Displayer_4Days()
@@ -130,6 +133,22 @@ namespace WeatherMelon
             lblTempDay4.Text = String.Format(fourDaysAhead[3].minTemp + " °C");
             weather4.Text = fourDaysAhead[3].condition;
             pictureBoxDay4.Image = fourDaysAhead[3].icon;
+        }
+
+        private void RecommendAction()
+        {
+            if (dtl.condition == "Sunny" || dtl.condition == "Clear"
+                || dtl.condition == "Partly cloudy")
+            {
+                lblRec.Text = "Cuaca Cerah";
+            }
+            else if (dtl.condition == "Cloudy" || dtl.condition == "Overcast"
+                || dtl.condition == "Mist")
+            {
+                lblRec.Text = "Cuaca Berawan";
+            }
+            else
+                lblRec.Text = "Cuaca Tidak menentu";
         }
 
         internal static Bitmap getIcon(string iconURL)

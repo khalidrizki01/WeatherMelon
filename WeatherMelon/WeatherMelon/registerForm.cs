@@ -79,6 +79,11 @@ namespace WeatherMelon
                 this.Close();
             }
 
+            catch (PostgresException ex)
+            {
+                MessageBox.Show("Error : Email sudah terdaftar", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
             catch (Exception ex)
             {
                 MessageBox.Show("Error : " + ex.Message, "Failed",
