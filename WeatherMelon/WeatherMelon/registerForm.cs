@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace WeatherMelon
 {
@@ -17,6 +18,8 @@ namespace WeatherMelon
         private NpgsqlConnection conn;
         private string query;
         private NpgsqlCommand cmd;
+        private DataTable dt;
+
 
         public LoginForm LoginForm { get => loginForm; set => loginForm = value; }
 
@@ -35,17 +38,39 @@ namespace WeatherMelon
                     conn.Close();
                     conn.Open();
                 }
-                query = @"SELECT * FROM user_insert(:_username,:_password)";
+                query = "INSERT INTO tableuser(username, password, favcity) VALUES ('" + tbEmailRegist.Text.Trim() + "', '" + tbPasswordRegist.Text.Trim() + "', '" + tbCityRegist.Text.Trim() + "')";
                 cmd = new NpgsqlCommand(query, conn);
 
-                cmd.Parameters.AddWithValue("_username", tbNameRegist.Text);
-                cmd.Parameters.AddWithValue("_password", tbPasswordRegist.Text);
+/*              cmd.Parameters.AddWithValue("_username", tbNameRegist.Text);
+                cmd.Parameters.AddWithValue("_password", tbPasswordRegist.Text);*/
 
-                if((int)cmd.ExecuteScalar() == 1)
+/*                if((int)cmd.ExecuteScalar() == 1)
                 {
                     MessageBox.Show("Success", "Success",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                     conn.Close();
+                }*/
+                dt = new DataTable();
+
+                NpgsqlDataReader rd = cmd.ExecuteReader();
+
+                dt.Load(rd);
+
+                if (dt.Rows.Count != 0)
+                {
+                    MessageBox.Show("Registrasi Berkendala");
+/*                    MainForm objForm1 = new MainForm();
+                    this.Hide();
+                    objForm1.Show();*/
+
+                }
+                else if (tbEmailRegist.Text == "" || tbPasswordRegist.Text == "")
+                {
+                    MessageBox.Show("Tidak ada input");
+                }
+                else
+                {
+                    MessageBox.Show("Registrasi berhasil");
                 }
 
             }

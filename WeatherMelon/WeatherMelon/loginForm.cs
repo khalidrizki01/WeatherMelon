@@ -21,7 +21,7 @@ namespace WeatherMelon
         }
 
         private NpgsqlConnection conn;
-        internal static string connstring = "Host=localhost;Port=5432;Username=postgres;Password=postgres;Database=postgres";
+        internal static string connstring = "Host=weathermelonserver.postgres.database.azure.com;Port=5432;Username=informatika@weathermelonserver;Password=Rangga12!;Database=mypgsqldb";
         private string query;
         private NpgsqlCommand cmd;
         private DataTable dt;
@@ -35,10 +35,7 @@ namespace WeatherMelon
                     conn.Close();
                     conn.Open();
                 }
-                query = "Select * from usertable where username = '" + tbEmail.Text.Trim() + "'and password = '" + tbPassword.Text.Trim() + "'";
-                /*SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(query, conn);
-                DataTable dataTable = new DataTable();
-                sqlDataAdapter.Fill(dataTable);*/
+                query = "Select * from tableuser where username = '" + tbEmail.Text.Trim() + "'and password = '" + tbPassword.Text.Trim() + "'";
 
                 cmd = new NpgsqlCommand(query, conn);
                 dt = new DataTable();
