@@ -98,6 +98,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Akun.cs" />
     <Compile Include="GraphicsExtension.cs" />
     <Compile Include="OrchidSPanel.cs">
       <SubType>Component</SubType>

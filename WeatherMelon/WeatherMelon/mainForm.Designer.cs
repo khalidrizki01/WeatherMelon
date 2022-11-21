@@ -361,6 +361,7 @@
             // 
             this.btnSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearch.BackgroundImage")));
             this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSearch.Location = new System.Drawing.Point(1041, 153);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(52, 29);
@@ -473,10 +474,10 @@
             // 
             // lblHari4
             // 
-            this.lblHari4.Location = new System.Drawing.Point(46, 14);
+            this.lblHari4.Location = new System.Drawing.Point(41, 14);
             this.lblHari4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHari4.Name = "lblHari4";
-            this.lblHari4.Size = new System.Drawing.Size(56, 31);
+            this.lblHari4.Size = new System.Drawing.Size(67, 32);
             this.lblHari4.TabIndex = 4;
             this.lblHari4.Text = "lblHari4";
             this.lblHari4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -663,10 +664,10 @@
             // 
             // lblHari2
             // 
-            this.lblHari2.Location = new System.Drawing.Point(42, 15);
+            this.lblHari2.Location = new System.Drawing.Point(39, 15);
             this.lblHari2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHari2.Name = "lblHari2";
-            this.lblHari2.Size = new System.Drawing.Size(58, 32);
+            this.lblHari2.Size = new System.Drawing.Size(67, 32);
             this.lblHari2.TabIndex = 0;
             this.lblHari2.Text = "lblHari2";
             this.lblHari2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -717,10 +718,10 @@
             // 
             // lblHari1
             // 
-            this.lblHari1.Location = new System.Drawing.Point(46, 15);
+            this.lblHari1.Location = new System.Drawing.Point(41, 15);
             this.lblHari1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHari1.Name = "lblHari1";
-            this.lblHari1.Size = new System.Drawing.Size(62, 28);
+            this.lblHari1.Size = new System.Drawing.Size(67, 32);
             this.lblHari1.TabIndex = 0;
             this.lblHari1.Text = "lblHari1";
             this.lblHari1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
