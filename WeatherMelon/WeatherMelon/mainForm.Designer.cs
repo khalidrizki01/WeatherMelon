@@ -56,7 +56,7 @@
             this.btFavCity = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.lblTitleTemp = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBookmark = new System.Windows.Forms.PictureBox();
             this.sPanel1 = new WeatherMelon.SPanel();
             this.lblWindSpeed = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -105,7 +105,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBookmark)).BeginInit();
             this.sPanel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDay4)).BeginInit();
@@ -382,15 +382,17 @@
             this.lblTitleTemp.Text = "Temperature";
             this.lblTitleTemp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox7
+            // pictureBookmark
             // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(433, 207);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(45, 37);
-            this.pictureBox7.TabIndex = 29;
-            this.pictureBox7.TabStop = false;
+            this.pictureBookmark.BackColor = System.Drawing.Color.White;
+            this.pictureBookmark.Image = ((System.Drawing.Image)(resources.GetObject("pictureBookmark.Image")));
+            this.pictureBookmark.Location = new System.Drawing.Point(433, 207);
+            this.pictureBookmark.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBookmark.Name = "pictureBookmark";
+            this.pictureBookmark.Size = new System.Drawing.Size(34, 30);
+            this.pictureBookmark.TabIndex = 29;
+            this.pictureBookmark.TabStop = false;
+            this.pictureBookmark.Click += new System.EventHandler(this.pictureBookmark_Click);
             // 
             // sPanel1
             // 
@@ -856,7 +858,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1130, 678);
-            this.Controls.Add(this.pictureBox7);
+            this.Controls.Add(this.pictureBookmark);
             this.Controls.Add(this.lblTitleTemp);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btFavCity);
@@ -879,7 +881,7 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBookmark)).EndInit();
             this.sPanel1.ResumeLayout(false);
             this.sPanel1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -954,7 +956,7 @@
         private System.Windows.Forms.Label lblTitleTemp;
         private System.Windows.Forms.Label lblWeatherMelon;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBookmark;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label weather4;
         private System.Windows.Forms.Label lblHari4;

@@ -48,8 +48,8 @@ namespace WeatherMelon
                 if (dt.Rows.Count == 1)
                 {
                     // dataGridView1.DataSource = dt;
-                    Akun akun = new Akun(dt.Rows[0]["username"].ToString(), dt.Rows[0]["password"].ToString(), dt.Rows[0]["favcity"].ToString());
-                    MessageBox.Show("Login berhasil");
+                    Akun akun = new Akun((Int32)dt.Rows[0]["id"], dt.Rows[0]["username"].ToString(), dt.Rows[0]["password"].ToString(), dt.Rows[0]["favcity"].ToString());
+                    MessageBox.Show("Login berhasil: {0}", akun.id.ToString());
 
                     MainForm objForm1 = new MainForm(akun);
                     this.Hide();

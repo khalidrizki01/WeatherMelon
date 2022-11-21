@@ -10,13 +10,15 @@ namespace WeatherMelon
 {
     public class Akun
     {
+        public int id;
         public string username;
         public string password;
         // public string email;
         public string tempatTinggal;
 
-        public Akun(string username, string password, string tempatTinggal)
+        public Akun(int id, string username, string password, string tempatTinggal)
         {
+            this.id = id;
             this.username = username;
             this.password = password;
             // this.email = email;

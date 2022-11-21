@@ -18,6 +18,7 @@ namespace WeatherMelon
         private readonly DetailCuaca dtl = new DetailCuaca();
         private List<string> listAutofill = new List<string>();
         Akun akun;
+        private bool bookmarked = false;
 
         public MainForm(Akun akun)
         {
@@ -168,6 +169,14 @@ namespace WeatherMelon
         private void tbSearch_TextChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void pictureBookmark_Click(object sender, EventArgs e)
+        {
+            bookmarked = !bookmarked;
+            if(bookmarked) pictureBookmark.BackColor = System.Drawing.Color.DarkSlateBlue;
+            else pictureBookmark.BackColor = System.Drawing.Color.White;
+
         }
     }
     
