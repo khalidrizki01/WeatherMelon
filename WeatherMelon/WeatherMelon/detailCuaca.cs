@@ -10,6 +10,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using static System.Net.WebRequestMethods;
+using Newtonsoft.Json;
+using System.Security.Policy;
+using RestSharp;
+
 
 namespace WeatherMelon
 {
@@ -93,6 +98,24 @@ namespace WeatherMelon
 
             }
             return dt;
+        }
+
+        public List<string> Autofill()
+        {
+            List<string> listAutofill = new List<string>();
+            var client = new RestClient("https://countriesnow.space/api/v0.1/countries");
+            var request = new RestRequest(Method.GET);
+
+            IRestResponse response = client.Execute(request);
+            JsonObject obj = (JsonObject)SimpleJson.DeserializeObject(response.Content);
+            JsonArray data = (JsonArray)obj["data"];
+            foreach(JsonObject country in data)
+            {
+                JsonArray cities = (JsonArray)country["cities"];
+                foreach(string city in cities) listAutofill.Add(city);
+                
+            }
+            return listAutofill;
         }
     }
 

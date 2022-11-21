@@ -16,27 +16,21 @@ namespace WeatherMelon
     {
         /*Constructor for DetailCuaca.cs*/
         private readonly DetailCuaca dtl = new DetailCuaca();
+        private List<string> listAutofill = new List<string>();
 
         public MainForm()
         {
             InitializeComponent();
-
-        }
-/*        private void MainForm_Load(object sender, EventArgs e)
-        {
-            // this.Shown += MainForm_Shown;
-        }
-
-        private void MainForm_Shown(object sender, EventArgs e)
-        {
-           *//* LoginForm loginForm = new LoginForm();
-
-            if (loginForm.ShowDialog() == DialogResult.OK)
+            listAutofill = dtl.Autofill();
+            foreach (string kota in listAutofill)
             {
-                MessageBox.Show("Nantikan fitur selanjutnya");
-                //this.Close();
-            }*//*
-        }*/
+                tbSearch.AutoCompleteCustomSource.Add(kota);
+                tbSearch.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                tbSearch.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            }
+
+
+        }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -104,7 +98,6 @@ namespace WeatherMelon
                 tempDtl.condition = Convert.ToString(dt.Rows[i]["Kondisi"]);
                 tempDtl.icon = (Bitmap)dt.Rows[i]["Icon"];
                 fourDaysAhead.Add(tempDtl);
-                // MessageBox.Show(tempDtl.date);
             }
 
             //besok 
@@ -164,7 +157,11 @@ namespace WeatherMelon
                 btnSearch_Click(sender, e);
             }
         }
-        
+
+        private void tbSearch_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
     
 }
