@@ -99,6 +99,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Akun.cs" />
+    <Compile Include="BoxFavorit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BoxFavorit.Designer.cs">
+      <DependentUpon>BoxFavorit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FavoriteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FavoriteForm.Designer.cs">
+      <DependentUpon>FavoriteForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GraphicsExtension.cs" />
     <Compile Include="OrchidSPanel.cs">
       <SubType>Component</SubType>
@@ -127,6 +139,12 @@
     <Compile Include="RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BoxFavorit.resx">
+      <DependentUpon>BoxFavorit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FavoriteForm.resx">
+      <DependentUpon>FavoriteForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
