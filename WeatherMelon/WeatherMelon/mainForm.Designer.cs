@@ -755,7 +755,7 @@
             this.lbCity.AutoSize = true;
             this.lbCity.BackColor = System.Drawing.Color.Transparent;
             this.lbCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCity.Location = new System.Drawing.Point(142, 145);
+            this.lbCity.Location = new System.Drawing.Point(141, 131);
             this.lbCity.Name = "lbCity";
             this.lbCity.Size = new System.Drawing.Size(75, 37);
             this.lbCity.TabIndex = 9;

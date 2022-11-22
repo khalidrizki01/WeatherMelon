@@ -53,7 +53,7 @@ namespace WeatherMelon
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                     conn.Close();
                 }*/
-                dt = new DataTable();
+/*                dt = new DataTable();
 
                 NpgsqlDataReader rd = cmd.ExecuteReader();
 
@@ -63,20 +63,21 @@ namespace WeatherMelon
                 {
                     
                     MessageBox.Show("Registrasi Berkendala");
-                    /*MainForm objForm1 = new MainForm(akun);
+                    *//*MainForm objForm1 = new MainForm(akun);
                     this.Hide();
-                    objForm1.Show();*/
+                    objForm1.Show();*//*
 
-                }
-                else if (tbEmailRegist.Text == "" || tbPasswordRegist.Text == "" || tbCityRegist.Text=="" || tbNameRegist.Text=="")
+                }*/
+                if (tbEmailRegist.Text == "" || tbPasswordRegist.Text == "" || tbCityRegist.Text=="" || tbNameRegist.Text=="")
                 {
                     MessageBox.Show("Harap isi seluruh kolom", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
+                    NpgsqlDataReader rd = cmd.ExecuteReader();
                     MessageBox.Show("Registrasi berhasil, silakan log in", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                this.Close();
+                    this.Close();
+                }   
             }
 
             catch (PostgresException ex)

@@ -84,7 +84,7 @@ namespace WeatherMelon
             lblRec.Font = new Font("Microsoft Sans Serif", 12, FontStyle.Bold);
 
             /*Assigning Values*/
-            lbCity.Text = dtl.resulting_city;
+            lbCity.Text = dtl.resulting_city + ",\n" + dtl.country;
             tbSearch.Text = dtl.resulting_city;
 
             lblTodayWeather.Text = dtl.condition;
